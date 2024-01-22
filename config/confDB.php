@@ -8,8 +8,8 @@
  */
 // Archivo de configuración de la BD del Instituto
 if ($_SERVER['SERVER_NAME'] == 'daw208.isauces.local') {
-    define('DSN', 'mysql:host=192.168.20.19;dbname=DB208DWESProyectoTema5'); // Host 'IP' y nombre de la base de datos
-    define('USERNAME', 'user208DWESProyectoTema5'); // Nombre de usuario de la base de datos
+    define('DSN', 'mysql:host=192.168.20.19;dbname=DB208DWESLoginLogoffTema5'); // Host 'IP' y nombre de la base de datos
+    define('USERNAME', 'user208DWESLoginLogoffTema5'); // Nombre de usuario de la base de datos
     define('PASSWORD', 'paso'); // Contraseña de la base de datos
     // Archivo de configuración de la BD de Explotación
 } elseif ($_SERVER['SERVER_NAME'] == 'daw208.ieslossauces.es') {

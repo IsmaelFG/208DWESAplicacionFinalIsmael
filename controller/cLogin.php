@@ -13,13 +13,20 @@ if (isset($_REQUEST['volver'])) {
     exit();
 }
 
+if (isset($_REQUEST['registrar'])) {
+    // Redirige a la página de inicio
+    $_SESSION['paginaActiva'] = 'registro';
+    header('Location: index.php');
+    exit();
+}
+
 $entradaOK = true; // Indica si todas las respuestas son correctas
 // Almacena los errores
 $aErrores = [
     'usuario' => '',
     'contrasena' => '',
 ];
-if (isset($_REQUEST['enviar'])) {
+if (isset($_REQUEST['inicioSesion'])) {
     $_SESSION['paginaAnterior'] = 'login';
 
     // Validamos si el usuario existe y es oUsuarioActivo utilizando el metodo 'validarUsuario()' de la clase 'UsuarioPDO'
