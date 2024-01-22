@@ -29,7 +29,7 @@
                                 </a>
                             </div>
                             <div class="col text-end">
-                                <a href="https://github.com/IsmaelFG/208DWESLoginLogoff" target="_blank">
+                                <a href="https://github.com/IsmaelFG/208DWESAplicacionFinalIsmael" target="_blank">
                                     <img src="/webroot/imagenes/github-removebg-preview.png" alt="GitHub" width="35" height="35">
                                 </a>
                             </div>
