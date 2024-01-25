@@ -16,6 +16,7 @@ if (empty($_SESSION['user208DWESLoginLogout'])) {
 if (isset($_REQUEST['cerrar_sesion'])) {
     session_destroy();
 // Redirige a la página de inicio
+    $_SESSION['paginaActiva'] = 'inicioPublico';
     header('Location: index.php');
     exit();
 }
@@ -23,6 +24,13 @@ if (isset($_REQUEST['cerrar_sesion'])) {
 // Ir a detalle al pulsar el boton
 if (isset($_REQUEST['detalle'])) {
     $_SESSION['paginaActiva'] = 'detalle';
+    header('Location: index.php');
+    exit();
+}
+
+// Ir a rest al pulsar el boton
+if (isset($_REQUEST['rest'])) {
+    $_SESSION['paginaActiva'] = 'rest';
     header('Location: index.php');
     exit();
 }

@@ -12,6 +12,7 @@ require_once 'model/ErrorApp.php';
 require_once 'model/Usuario.php';
 require_once 'model/UsuarioDB.php';
 require_once 'model/UsuarioPDO.php';
+require_once 'model/REST.php';
 
 $controller = [
     'inicioPublico' => 'controller/cInicioPublico.php',
@@ -23,7 +24,8 @@ $controller = [
     'borrarCuenta' => 'controller/cBorrarCuenta.php',
     'wip' => 'controller/cWIP.php',
     'error' => 'controller/cError.php',
-    'detalle' => 'controller/cDetalle.php'
+    'detalle' => 'controller/cDetalle.php',
+    'rest' => 'controller/cREST.php'
 ];
 
 $view = [
@@ -37,5 +39,6 @@ $view = [
     'borrarCuenta' => 'view/vBorrarCuenta.php',
     'wip' => 'view/vWIP.php',
     'error' => 'view/vError.php',
-    'detalle' => 'view/vDetalle.php'
+    'detalle' => 'view/vDetalle.php',
+    'rest' => 'view/vREST.php'
 ];
