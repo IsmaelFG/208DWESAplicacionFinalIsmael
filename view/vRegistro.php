@@ -8,7 +8,7 @@
 <a class="navbar-brand text-white">Registro</a>
 </div>
 </nav>
-<form class="login" action="<?php echo $_SERVER ['PHP_SELF']; ?>" method="post">
+<form class="position-absolute top-0 start-50 translate-middle login" style="margin-top: 350px" action="<?php echo $_SERVER ['PHP_SELF']; ?>" method="post">
     <table>
         <tr>
             <td><label for="usuario">Usuario:</label></td>

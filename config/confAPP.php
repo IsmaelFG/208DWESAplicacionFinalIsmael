@@ -25,7 +25,9 @@ $controller = [
     'wip' => 'controller/cWIP.php',
     'error' => 'controller/cError.php',
     'detalle' => 'controller/cDetalle.php',
-    'rest' => 'controller/cREST.php'
+    'rest' => 'controller/cREST.php',
+    'borrarCuenta' => 'controller/cBorrarCuenta.php',
+    'cambiarPassword' => 'controller/cCambiarPassword.php'
 ];
 
 $view = [
@@ -40,5 +42,7 @@ $view = [
     'wip' => 'view/vWIP.php',
     'error' => 'view/vError.php',
     'detalle' => 'view/vDetalle.php',
-    'rest' => 'view/vREST.php'
+    'rest' => 'view/vREST.php',
+    'borrarCuenta' => 'view/vBorrarCuenta.php',
+    'cambiarPassword' => 'view/vCambiarPassword.php'
 ];

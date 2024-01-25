@@ -8,16 +8,19 @@
 <a class="navbar-brand text-white">Inicio Privado</a>
 </div>
 </nav>
-<?php 
-echo $avInicioPrivado['bienvenida'];
-echo $avInicioPrivado['numConexiones'];
-echo $avInicioPrivado['ultimaConexion'];
-?>
-<form method="post" action="">
-    <input class="cerrar_sesion" type="submit" name="cerrar_sesion" value="Cerrar Sesión">
-    <input class="detalle" type="submit" name="detalle" value="Detalle">
-    <input class="rest" type="submit" name="rest" value="Rest">
-</form>
+<div class="position-absolute top-0 start-50 translate-middle" style="margin-top: 350px">
+    <?php
+    echo $avInicioPrivado['bienvenida'];
+    echo $avInicioPrivado['numConexiones'];
+    echo $avInicioPrivado['ultimaConexion'];
+    ?>
+    <form method="post" action="">
+        <input type="submit" name="cerrar_sesion" value="Cerrar Sesión">
+        <input type="submit" name="detalle" value="Detalle">
+        <input type="submit" name="editarPerfil" value="Editar Perfil">
+        <input type="submit" name="rest" value="Rest">
+    </form>
+</div>
 
 
 

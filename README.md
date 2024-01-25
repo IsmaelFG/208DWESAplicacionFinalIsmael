@@ -12,4 +12,4 @@ Aplicacion Final Ismael
 ##Funcionalidad
 
 ##Entorno de desarrollo
-(http://daw208.isauces.local/208DWESAplicacionFinalIsmael/index.php)
+(http://daw208.isauces.local/208DWESProyectoAplicacionFinalIsmael/index.php)

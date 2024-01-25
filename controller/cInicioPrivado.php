@@ -28,6 +28,13 @@ if (isset($_REQUEST['detalle'])) {
     exit();
 }
 
+// Ir a MiCuenta al pulsar el boton
+if (isset($_REQUEST['editarPerfil'])) {
+    $_SESSION['paginaActiva'] = 'miCuenta';
+    header('Location: index.php');
+    exit();
+}
+
 // Ir a rest al pulsar el boton
 if (isset($_REQUEST['rest'])) {
     $_SESSION['paginaActiva'] = 'rest';
