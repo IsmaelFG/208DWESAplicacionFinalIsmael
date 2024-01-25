@@ -29,11 +29,9 @@ echo "<pre>{$prevision}</pre>";
         <legend>
             <h2>Foto del dia de la nasa</h2>
         </legend>
-        <input type="date" name="fecha" max=<?php
-        $hoy = date("Y-m-d");
-        echo $hoy;
-        ?>
-               <input type="submit" value="Aceptar" name="nasa" >
+        <input type="date" name="fecha" max=<?php $hoy = date("Y-m-d");
+echo $hoy; ?>>
+        <input type="submit" value="Aceptar" name="nasa" >
         <p><b>Descripcion:</b> <?php echo $explicacion; ?></p>
         <p><b>Titulo de la Imagen:</b> <?php echo $title; ?></p>
         <img src="<?php echo $imagen; ?>" width="300px" height="300px" />
