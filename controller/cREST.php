@@ -5,8 +5,6 @@
  * @version 1.0
  * @since 23/01/2024
  */
-//Inicializamos a null
-$prevision = null;
 // Array asociativo con códigos INE y nombres de provincias
 $provincias = array(
     '01' => 'Araba/Álava',
@@ -76,33 +74,31 @@ if (isset($_REQUEST['volver'])) {
 
 
 if (isset($_REQUEST['prevision'])) {
-    $prevision = REST::tiempoProvincia($_REQUEST['provincia']);
+    $_SESSION['provinciaSeleccionada'] = $_REQUEST['provincia'];
+    $_SESSION['prevision'] = REST::tiempoProvincia($_REQUEST['provincia']);
 }
 
 
 /**
- * @author CristinaMLSauces , mejorado por Alvaro Cordero.
+ * @author CristinaMLSauces , mejorado por Ismael Ferreras García.
  * @version 1.0
  * @since 21/01/2024
  */
-//Inicializamos las variables a null
-$Nasa = null;
-$explicacion = null;
-$imagen = null;
-$title = null;
 if (isset($_REQUEST['nasa'])) {
 
     //Guardamos la informacion de la api en una variable
     $Nasa = REST::pedirFotoNasa($_REQUEST['fecha']);
 
     //Guardamos el texto en una variable
-    $explicacion = $Nasa['explanation'];
+    $_SESSION['nasaExplicacion'] = $Nasa['explanation'];
 
     //Guardamos la url de la imagen en una variable
-    $imagen = $Nasa['hdurl'];
+    $_SESSION['nasaImagen'] = $Nasa['hdurl'];
 
     //Gurdamos el titulo en una variable
-    $title = $Nasa['title'];
+    $_SESSION['nasaTitulo'] = $Nasa['title'];
+    
+    $_SESSION['nasaFecha']=$_REQUEST['fecha'];
 }
 require_once $view['layout'];
 ?>
