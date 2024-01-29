@@ -88,16 +88,8 @@ if (isset($_REQUEST['nasa'])) {
 
     //Guardamos la informacion de la api en una variable
     $Nasa = REST::pedirFotoNasa($_REQUEST['fecha']);
-
-    //Guardamos el texto en una variable
-    $_SESSION['nasaExplicacion'] = $Nasa['explanation'];
-
-    //Guardamos la url de la imagen en una variable
-    $_SESSION['nasaImagen'] = $Nasa['hdurl'];
-
-    //Gurdamos el titulo en una variable
-    $_SESSION['nasaTitulo'] = $Nasa['title'];
-    
+    //Guardamos en sesion
+    $_SESSION['nasa'] = $Nasa;
     $_SESSION['nasaFecha']=$_REQUEST['fecha'];
 }
 require_once $view['layout'];

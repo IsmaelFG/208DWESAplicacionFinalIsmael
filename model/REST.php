@@ -7,11 +7,13 @@
  */
 class REST {
 
+    const apikeyAEMET = 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtaWx1Lm1hc2NvdEBnbWFpbC5jb20iLCJqdGkiOiJhNjM3MTIyOS04OGI4LTQ4MGMtYmNlZC02N2NiNzVjYmRmNTIiLCJpc3MiOiJBRU1FVCIsImlhdCI6MTcwNTk1MjE4MSwidXNlcklkIjoiYTYzNzEyMjktODhiOC00ODBjLWJjZWQtNjdjYjc1Y2JkZjUyIiwicm9sZSI6IiJ9.mGZuRsDqW5jlQXy1ZKuMyTBUHJ0VIN2oBdITtk3S7Nc';
+    const apikeyNASA = 'rAIYGgvhzNQg1Lxtpe90waf8orEmQPTrZrfdra14';
+
     public static function tiempoProvincia($provincia) {
-        $clave_api = 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtaWx1Lm1hc2NvdEBnbWFpbC5jb20iLCJqdGkiOiJhNjM3MTIyOS04OGI4LTQ4MGMtYmNlZC02N2NiNzVjYmRmNTIiLCJpc3MiOiJBRU1FVCIsImlhdCI6MTcwNTk1MjE4MSwidXNlcklkIjoiYTYzNzEyMjktODhiOC00ODBjLWJjZWQtNjdjYjc1Y2JkZjUyIiwicm9sZSI6IiJ9.mGZuRsDqW5jlQXy1ZKuMyTBUHJ0VIN2oBdITtk3S7Nc';
         try {
             // obtenemos el resultado del servidor del api rest
-            $respuesta = file_get_contents("https://opendata.aemet.es/opendata/api/prediccion/provincia/hoy/{$provincia}/?api_key=$clave_api", true);
+            $respuesta = file_get_contents("https://opendata.aemet.es/opendata/api/prediccion/provincia/hoy/{$provincia}/?api_key=".self::apikeyAEMET, true);
             //decodifica el archivo json
             $aTiempo = json_decode($respuesta, true);
             //Devuelve los datos de la web convertidos a utf-8
@@ -30,7 +32,7 @@ class REST {
     public static function pedirFotoNasa($fecha) {
         try {
             // obtenemos el resultado del servidor del api rest
-            $resultado = file_get_contents("https://api.nasa.gov/planetary/apod?api_key=rAIYGgvhzNQg1Lxtpe90waf8orEmQPTrZrfdra14&date=$fecha", true);
+            $resultado = file_get_contents("https://api.nasa.gov/planetary/apod?api_key=".self::apikeyNASA."&date=$fecha", true);
 
             // si no obtenemos el resultado esperado
             if ($resultado == false) {
