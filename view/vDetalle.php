@@ -14,7 +14,9 @@ if (isset($_SESSION)) {
     echo '<br><br><h2>Variable <b>$_SESSION</b></h2>';
     foreach ($_SESSION as $key => $value) {
         if ($key === 'user208DWESLoginLogout') {
-            print_r("<b>$key</b>:" . $value->getDescUsuario()."<br>");
+            echo '<b>user208DWESLoginLogout: </b>'; print_r($_SESSION['user208DWESLoginLogout']);
+        } else if ($key === 'nasa') {
+            echo '<b>nasa: </b>'; print_r($_SESSION['nasa']);
         } else {
             echo "<b>$key</b>: $value<br>";
         }

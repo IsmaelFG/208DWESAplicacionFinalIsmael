@@ -45,5 +45,5 @@
     </div>
 </div>
 <div class="position-absolute top-50 start-50 translate-middle">
-    <h1>LoginLogoff</h1>
+    <h1>Aplicación Final</h1>
 </div>

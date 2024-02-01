@@ -18,7 +18,7 @@
     <body>
         <nav class="navbar navbar-expand-lg bg-primary">
             <div class="container">
-                <a class="navbar-brand text-white">Aplicacion Final</a>
+                <a class="navbar-brand text-white">Aplicación Final</a>
                 <?php require_once $view[$_SESSION['paginaActiva']]; ?>
                 <footer class="bg-primary text-light py-4 fixed-bottom">
                     <div class="container">
@@ -29,6 +29,8 @@
                                 </a>
                             </div>
                             <div class="col text-end">
+                                <a href="https://www.facebook.com/" target="_blank" class="text-white mr-3" style="text-decoration: none;">Imitada</a>
+                                <a href="webroot/documentos/curriculum.pdf" target="_blank" class="text-white mr-3" style="text-decoration: none;">Curriculum</a>
                                 <a href="https://github.com/IsmaelFG/208DWESAplicacionFinalIsmael" target="_blank">
                                     <img src="/webroot/imagenes/github-removebg-preview.png" alt="GitHub" width="35" height="35">
                                 </a>
