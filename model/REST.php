@@ -13,7 +13,7 @@ class REST {
     public static function tiempoProvincia($provincia) {
         try {
             // obtenemos el resultado del servidor del api rest
-            $respuesta = file_get_contents("https://opendata.aemet.es/opendata/api/prediccion/provincia/hoy/{$provincia}/?api_key=".self::apikeyAEMET, true);
+            $respuesta = file_get_contents("https://opendata.aemet.es/opendata/api/prediccion/provincia/hoy/{$provincia}/?api_key=" . self::apikeyAEMET, true);
             //decodifica el archivo json
             $aTiempo = json_decode($respuesta, true);
             //Devuelve los datos de la web convertidos a utf-8
@@ -32,20 +32,12 @@ class REST {
     public static function pedirFotoNasa($fecha) {
         try {
             // obtenemos el resultado del servidor del api rest
-            $resultado = file_get_contents("https://api.nasa.gov/planetary/apod?api_key=".self::apikeyNASA."&date=$fecha", true);
-
-            // si no obtenemos el resultado esperado
-            if ($resultado == false) {
-
-                //Lanzamos una excepcion
-                throw new Exception("Error en la conexión con el servidor, vuelva a intentarlo mas tarde");
-            }
+            $resultado = file_get_contents("https://api.nasa.gov/planetary/apod?api_key=" . self::apikeyNASA . "&date=$fecha");
 
             // Almacenamos el array devuelto por json_decode
-            $aNasa = json_decode($resultado, true);
-
+            $aNasa = json_decode($resultado, true);  
             //devolvemos un array con los datos que queremos devolver
-            return $aNasa;
+                return $aNasa;
         } catch (Exception $excepcion) {
             // devolvemos el mensaje de error
             return $excepcion->getMessage();

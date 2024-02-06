@@ -12,6 +12,7 @@
     <form method="post">
         <legend>
             <h2>Tiempo por provincia AEMET</h2>
+            <p style="font-size:16px">Documentacion sobre la api: <a target="_blank" href="https://opendata.aemet.es/centrodedescargas/inicio">ver</a></p>
         </legend>
         <label for="provincia">Selecciona una provincia:</label>
         <?php
@@ -81,9 +82,11 @@
         <fieldset class=" nasa">
             <legend>
                 <h2>Foto del dia de la nasa</h2>
+                <p style="font-size:16px">Documentacion sobre la api: <a target="_blank" href="https://api.nasa.gov/">ver</a></p>
+
             </legend>
-            <input type="date" name="fecha" value="<?php echo isset($_SESSION['nasaFecha']) ? $_SESSION['nasaFecha'] : "" ?>" max=<?php
-            $hoy = date("Y-m-d");
+            <?php $hoy = date("Y-m-d"); ?>
+            <input type="date" name="fecha" value="<?php echo isset($_SESSION['nasaFecha']) ? $_SESSION['nasaFecha'] : $hoy; ?>" max=<?php
             echo $hoy;
             ?>>
             <input type="submit" value="Aceptar" name="nasa" >
@@ -91,7 +94,9 @@
                 <p><b>Descripcion:</b> <?php echo $_SESSION['nasa']['explanation']; ?></p>
                 <p><b>Titulo de la Imagen:</b> <?php echo $_SESSION['nasa']['title']; ?></p>
                 <img src="<?php echo $_SESSION['nasa']['hdurl']; ?>" width="300px" height="300px" />
-            <?php } ?>
+                <?php
+            }
+            ?>
         </fieldset>
         <button class="volver" type="submit" name="volver">Volver</button>
     </form>
