@@ -5,59 +5,9 @@
  * @version 1.0
  * @since 23/01/2024
  */
-// Array asociativo con códigos INE y nombres de provincias
-$provincias = array(
-    '01' => 'Araba/Álava',
-    '02' => 'Albacete',
-    '03' => 'Alacant/Alicante',
-    '04' => 'Almería',
-    '33' => 'Asturias',
-    '05' => 'Ávila',
-    '06' => 'Badajoz',
-    '08' => 'Barcelona',
-    '48' => 'Bizkaia',
-    '09' => 'Burgos',
-    '10' => 'Cáceres',
-    '11' => 'Cádiz',
-    '39' => 'Cantabria',
-    '12' => 'Castelló/Castellón',
-    '51' => 'Ceuta',
-    '13' => 'Ciudad Real',
-    '14' => 'Córdoba',
-    '15' => 'A Coruña',
-    '16' => 'Cuenca',
-    '17' => 'Girona',
-    '18' => 'Granada',
-    '19' => 'Guadalajara',
-    '20' => 'Gipuzkoa',
-    '21' => 'Huelva',
-    '22' => 'Huesca',
-    '23' => 'Jaén',
-    '24' => 'León',
-    '25' => 'Lleida',
-    '27' => 'Lugo',
-    '28' => 'Madrid',
-    '29' => 'Málaga',
-    '52' => 'Melilla',
-    '30' => 'Murcia',
-    '31' => 'Navarra',
-    '32' => 'Ourense',
-    '34' => 'Palencia',
-    '36' => 'Pontevedra',
-    '26' => 'La Rioja',
-    '37' => 'Salamanca',
-    '40' => 'Segovia',
-    '41' => 'Sevilla',
-    '42' => 'Soria',
-    '43' => 'Tarragona',
-    '44' => 'Teruel',
-    '45' => 'Toledo',
-    '46' => 'València/Valencia',
-    '47' => 'Valladolid',
-    '49' => 'Zamora',
-    '50' => 'Zaragoza',
-);
 
+//Variable con la fecha de hoy
+$hoy = date("Y-m-d");
 if (empty($_SESSION['user208DWESLoginLogout'])) {
     // Redirige a la página de inicio
     $_SESSION['paginaActiva'] = 'inicioPublico';
@@ -73,9 +23,17 @@ if (isset($_REQUEST['volver'])) {
 }
 
 
-if (isset($_REQUEST['prevision'])) {
-    $_SESSION['provinciaSeleccionada'] = $_REQUEST['provincia'];
-    $_SESSION['prevision'] = REST::tiempoProvincia($_REQUEST['provincia']);
+if (isset($_REQUEST['prevision']) || !isset($aPrevision)) {
+    //Si la se sesion no esta inicializada la inicializamos a null
+    if (!isset($_SESSION['provinciaSeleccionada'])) {
+        $_SESSION['provinciaSeleccionada'] = '01';
+    }
+    //Guardamos en sesion la provincia
+    if (isset($_REQUEST['provincia'])) {
+        $_SESSION['provinciaSeleccionada'] = $_REQUEST['provincia'];
+    }
+    $aPrevision = REST::tiempoProvincia(isset($_REQUEST['provincia']) ? $_REQUEST['provincia'] : $_SESSION['provinciaSeleccionada']);
+    $previsionUtf8 = utf8_encode(file_get_contents($aPrevision['datos']));
 }
 
 
@@ -84,13 +42,17 @@ if (isset($_REQUEST['prevision'])) {
  * @version 1.0
  * @since 21/01/2024
  */
-if (isset($_REQUEST['nasa'])) {
-
+if (isset($_REQUEST['nasa']) || !isset($aNasa)) {
+    //Si la se sesion no esta inicializada la inicializamos a null
+    if (!isset($_SESSION['nasaFecha'])) {
+        $_SESSION['nasaFecha'] = $hoy;
+    }
+    //Guardamos en sesion la fecha
+    if (isset($_REQUEST['fecha'])) {
+        $_SESSION['nasaFecha'] = $_REQUEST['fecha'];
+    }
     //Guardamos la informacion de la api en una variable
-    $Nasa = REST::pedirFotoNasa($_REQUEST['fecha']);
-    //Guardamos en sesion
-    $_SESSION['nasa'] = $Nasa;
-    $_SESSION['nasaFecha']=$_REQUEST['fecha'];
+    $aNasa = REST::pedirFotoNasa(isset($_REQUEST['fecha']) ? $_REQUEST['fecha'] : $_SESSION['nasaFecha']);
 }
 require_once $view['layout'];
 ?>
