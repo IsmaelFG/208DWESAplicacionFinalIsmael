@@ -5,6 +5,10 @@
  * @version 1.0
  * @since 23/01/2024
  */
+$aVistaRest = [
+    'AEMET' => [],
+    'NASA' => []
+];
 //Variable con la fecha de hoy
 $hoy = date("Y-m-d");
 if (empty($_SESSION['user208DWESLoginLogout'])) {
@@ -40,9 +44,8 @@ if (!isset($_SESSION['nasaFecha'])) {
 }
 
 //Llamada a api AEMET
-$aPrevision = REST::tiempoProvincia(isset($_REQUEST['provincia']) ? $_REQUEST['provincia'] : $_SESSION['provinciaSeleccionada']);
-$previsionUtf8 = utf8_encode(file_get_contents($aPrevision['datos']));
+$aVistaRest['AEMET'] = REST::tiempoProvincia(isset($_REQUEST['provincia']) ? $_REQUEST['provincia'] : $_SESSION['provinciaSeleccionada']);
 //Llamada a api Nasa
-$aNasa = REST::pedirFotoNasa(isset($_REQUEST['fecha']) ? $_REQUEST['fecha'] : $_SESSION['nasaFecha']);
+$aVistaRest['NASA'] = REST::pedirFotoNasa(isset($_REQUEST['fecha']) ? $_REQUEST['fecha'] : $_SESSION['nasaFecha']);
 require_once $view['layout'];
 ?>

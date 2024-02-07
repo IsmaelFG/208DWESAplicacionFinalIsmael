@@ -77,6 +77,7 @@
         </form>
         <?php
         // Muestra con formato los datos
+        $previsionUtf8 = utf8_encode(file_get_contents($aVistaRest['AEMET']['datos']));
         if (isset($previsionUtf8)) {
             echo "<pre>{$previsionUtf8}</pre>";
         }
@@ -92,11 +93,11 @@
                     <p style="font-size:16px">Parametros: <b>Fecha</b></p>
                 </legend>
                 <input type="date" name="fecha" value="<?php echo $_SESSION['nasaFecha'] ?>" max=<?php
-                       echo $hoy;
-                       ?>>
+                echo $hoy;
+                ?>>
                 <input type="submit" value="Aceptar" name="nasa">
-                <p><b>Titulo de la Imagen:</b> <?php echo $aNasa['title']; ?></p>
-                <img src="<?php echo $aNasa['hdurl']; ?>" width="300px" height="300px" />
+                <p><b>Titulo de la Imagen:</b> <?php echo $aVistaRest['NASA']['title']; ?></p>
+                <img src="<?php echo $aVistaRest['NASA']['hdurl']; ?>" width="300px" height="300px" />
             </fieldset>
             <button class="volver" type="submit" name="volver">Volver</button>
         </form>
