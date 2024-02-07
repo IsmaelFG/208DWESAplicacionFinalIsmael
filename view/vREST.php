@@ -19,8 +19,8 @@
             </legend>
             <label for="provincia">Selecciona una provincia:</label>
             <?php
-            // Definir el valor por defecto para el select
-            $provinciaSeleccionada = $_SESSION['provinciaSeleccionada'];
+            // Definir el valor $provinciaSeleccionada
+            $provinciaSeleccionada = isset($_SESSION['provinciaSeleccionada']) ? $_SESSION['provinciaSeleccionada'] : '01';
             ?>
             <select name="provincia" id="provincia">
                 <option value="01" <?php echo ($provinciaSeleccionada == '01') ? 'selected' : ''; ?>>Araba/Álava</option>
@@ -92,7 +92,7 @@
                     <p style="font-size:16px">Metodo de peticion: <b>GET</b></p>
                     <p style="font-size:16px">Parametros: <b>Fecha</b></p>
                 </legend>
-                <input type="date" name="fecha" value="<?php echo $_SESSION['nasaFecha'] ?>" max=<?php
+                <input type="date" name="fecha" value="<?php echo isset($_SESSION['nasaFecha']) ? $_SESSION['nasaFecha'] : $hoy ?>" max=<?php
                 echo $hoy;
                 ?>>
                 <input type="submit" value="Aceptar" name="nasa">

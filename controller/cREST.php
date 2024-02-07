@@ -34,18 +34,9 @@ if (isset($_REQUEST['fecha'])) {
     $_SESSION['nasaFecha'] = $_REQUEST['fecha'];
 }
 
-//Si la se sesion no esta inicializada la inicializamos a 01
-if (!isset($_SESSION['provinciaSeleccionada'])) {
-    $_SESSION['provinciaSeleccionada'] = '01';
-}
-//Si la se sesion no esta inicializada la inicializamos a hoy
-if (!isset($_SESSION['nasaFecha'])) {
-    $_SESSION['nasaFecha'] = $hoy;
-}
-
 //Llamada a api AEMET
-$aVistaRest['AEMET'] = REST::tiempoProvincia(isset($_REQUEST['provincia']) ? $_REQUEST['provincia'] : $_SESSION['provinciaSeleccionada']);
+$aVistaRest['AEMET'] = REST::tiempoProvincia(isset($_SESSION['provinciaSeleccionada']) ? $_SESSION['provinciaSeleccionada'] : '01');
 //Llamada a api Nasa
-$aVistaRest['NASA'] = REST::pedirFotoNasa(isset($_REQUEST['fecha']) ? $_REQUEST['fecha'] : $_SESSION['nasaFecha']);
+$aVistaRest['NASA'] = REST::pedirFotoNasa(isset( $_SESSION['nasaFecha']) ?  $_SESSION['nasaFecha'] : $hoy);
 require_once $view['layout'];
 ?>
