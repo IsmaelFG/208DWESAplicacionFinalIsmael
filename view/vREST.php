@@ -92,8 +92,8 @@
                     <p style="font-size:16px">Parametros: <b>Fecha</b></p>
                 </legend>
                 <input type="date" name="fecha" value="<?php echo $_SESSION['nasaFecha'] ?>" max=<?php
-                echo $hoy;
-                ?>>
+                       echo $hoy;
+                       ?>>
                 <input type="submit" value="Aceptar" name="nasa">
                 <p><b>Titulo de la Imagen:</b> <?php echo $aNasa['title']; ?></p>
                 <img src="<?php echo $aNasa['hdurl']; ?>" width="300px" height="300px" />
