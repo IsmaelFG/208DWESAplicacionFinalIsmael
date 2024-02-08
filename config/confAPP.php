@@ -13,6 +13,8 @@ require_once 'model/Usuario.php';
 require_once 'model/UsuarioDB.php';
 require_once 'model/UsuarioPDO.php';
 require_once 'model/REST.php';
+require_once 'model/Departamento.php';
+require_once 'model/DepartamentoPDO.php';
 
 $controller = [
     'inicioPublico' => 'controller/cInicioPublico.php',
@@ -27,7 +29,8 @@ $controller = [
     'detalle' => 'controller/cDetalle.php',
     'rest' => 'controller/cREST.php',
     'borrarCuenta' => 'controller/cBorrarCuenta.php',
-    'cambiarPassword' => 'controller/cCambiarPassword.php'
+    'cambiarPassword' => 'controller/cCambiarPassword.php',
+    'mtoDepartamento' => 'controller/cMtoDepartamento.php'
 ];
 
 $view = [
@@ -44,5 +47,6 @@ $view = [
     'detalle' => 'view/vDetalle.php',
     'rest' => 'view/vREST.php',
     'borrarCuenta' => 'view/vBorrarCuenta.php',
-    'cambiarPassword' => 'view/vCambiarPassword.php'
+    'cambiarPassword' => 'view/vCambiarPassword.php',
+    'mtoDepartamento' => 'view/vMtoDepartamento.php'
 ];

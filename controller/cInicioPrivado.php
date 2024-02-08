@@ -42,6 +42,13 @@ if (isset($_REQUEST['rest'])) {
     exit();
 }
 
+// Ir a rest al pulsar el boton
+if (isset($_REQUEST['mtoDepartamento'])) {
+    $_SESSION['paginaActiva'] = 'mtoDepartamento';
+    header('Location: index.php');
+    exit();
+}
+
 // Define los mensajes según el idioma
 if ($_COOKIE['idioma'] == 'es') {
     $bienvenida = "Bienvenido, {$_SESSION['user208DWESLoginLogout']->getdescUsuario()}.<br>";
