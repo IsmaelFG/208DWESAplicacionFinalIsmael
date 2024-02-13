@@ -25,6 +25,17 @@ CREATE TABLE IF NOT EXISTS T02_Departamento (
     T02_FechaBajaDepartamento DATETIME DEFAULT NULL,
     PRIMARY KEY (T02_CodDepartamento));
 
+
+CREATE TABLE IF NOT EXISTS T10_Vehiculo (
+    T10_Matricula VARCHAR(7) NOT NULL,
+    T10_Modelo VARCHAR(50) NOT NULL,
+    T10_FechaCompra DATETIME NOT NULL,
+    T10_NumPuertas INT NOT NULL,
+    T10_Color VARCHAR(50),
+    T10_Valor DECIMAL(18,2),
+    T10_FechaBaja DATETIME DEFAULT NULL,
+    PRIMARY KEY (T10_Matricula));
+
 -- Crear usuario y dar privilegios
 CREATE USER 'user208DWESProyectoTema5'@'%' IDENTIFIED BY 'paso';
 GRANT ALL PRIVILEGES ON DB208DWESProyectoTema5.* TO 'user208DWESProyectoTema5';

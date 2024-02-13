@@ -59,8 +59,16 @@
   ('heraclio', SHA2(CONCAT('heraclio', 'paso'), 256), 'Heraclio Borbujo Moran', 'administrador'),
   ('amor', SHA2(CONCAT('amor', 'paso'), 256), 'Amor Rodriguez Navarro', 'administrador');";
 
+            $query3 = "INSERT INTO T10_Vehiculo (T10_Matricula, T10_Modelo, T10_FechaCompra, T10_NumPuertas, T10_Color, T10_Valor, T10_FechaBaja) VALUES
+            ('ABC1234', 'Toyota Corolla', '2023-01-15 10:30:00', 4, 'Rojo', 15000.00, NULL),
+            ('DEF5678', 'Honda Civic', '2022-11-20 14:45:00', 4, 'Azul', 18000.50, NULL),
+            ('GHI9012', 'Ford Mustang', '2023-05-10 09:15:00', 2, 'Negro', 35000.75, NULL),
+            ('JKL3456', 'Chevrolet Camaro', '2023-07-05 11:00:00', 2, 'Blanco', 32000.25, NULL),
+            ('MNO7890', 'Volkswagen Golf', '2023-03-28 08:00:00', 4, 'Gris', 22000.00, NULL)";
+
             $conn->exec($query);
             $conn->exec($query2);
+            $conn->exec($query3);
             echo 'Consulta ejecutada con éxito';
         } catch (PDOException $e) {
             echo 'Error: ' . $e->getMessage();

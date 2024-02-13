@@ -17,8 +17,6 @@ if (isset($_REQUEST['salirDepartamentos'])) {
     exit;
 }
 
-//Declaración de variables de estructura para validar la ENTRADA de RESPUESTAS o ERRORES
-//Indica si todas las respuestas son correctas
 $entradaOK = true;
 
 // Almacena los errores

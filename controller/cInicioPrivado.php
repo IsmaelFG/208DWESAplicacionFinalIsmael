@@ -42,9 +42,16 @@ if (isset($_REQUEST['rest'])) {
     exit();
 }
 
-// Ir a rest al pulsar el boton
+// Ir a Mto Departamento al pulsar el boton
 if (isset($_REQUEST['mtoDepartamento'])) {
     $_SESSION['paginaActiva'] = 'mtoDepartamento';
+    header('Location: index.php');
+    exit();
+}
+
+// Ir a Mto Vehiculo al pulsar el boton
+if (isset($_REQUEST['mtoVehiculo'])) {
+    $_SESSION['paginaActiva'] = 'mtoVehiculo';
     header('Location: index.php');
     exit();
 }
