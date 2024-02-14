@@ -22,7 +22,7 @@ $aErrores['modeloVehiculo'] = '';
 if (isset($_REQUEST['buscarModeloVehiculo'])) {
 
     //Validamos el criterio de busqueda
-    $aErrores['modeloVehiculo'] = validacionFormularios::comprobarAlfabetico($_REQUEST['modeloVehiculo'], 255, 1, 0);
+    $aErrores['modeloVehiculo'] = validacionFormularios::comprobarAlfabetico($_REQUEST['modeloVehiculo'], 50, 1, 0);
 
     //Recorremos el array de errores
     foreach ($aErrores as $campo => $error) {
@@ -45,17 +45,13 @@ if ($entradaOK) {
 
 //Iniciamos el array de la vista
 $aVehiculosVista = [];
-
-//Contador para el num de registros
-$cRegistros = 0;
-
+//Realiza la busqueda en la base de datos y lo mete en un array
 $aVehiculos = VehiculoPDO::buscarModeloVehiculo(isset($_SESSION['busqueda']) ? $_SESSION['busqueda'] : '');
 
 if ($aVehiculos) {
-
-    //Recorro el array del resultante
+    //Recorro el array resultante
     foreach ($aVehiculos as $vehiculo) {
-        //Metemos mediante array_push los campos 
+        //Metemos mediante array_push los campos en aVista
         array_push($aVehiculosVista, [
             'matricula' => $vehiculo->getMatricula(),
             'modelo' => $vehiculo->getModelo(),
@@ -65,9 +61,6 @@ if ($aVehiculos) {
             'valor' => $vehiculo->getValor(),
             'fechaBaja' => !is_null($vehiculo->getFechaBaja()) ? $vehiculo->getFechaBaja() : ''
         ]);
-
-        //Incremento el contador
-        $cRegistros++;
     }
 } else {
 

@@ -8,7 +8,7 @@
 <a class="navbar-brand text-white">Mantenimiento Vehiculo</a>
 </div>
 </nav>
-<div class="formulario">
+<div style="margin: 20px;">
     <form name="formulario" method="post">
         <div>
             <label for="DescDepartamento" style="margin-top: 5px;">Modelo: </label>
@@ -21,7 +21,7 @@
         </div>
     </form>
 </div>
-<div class="tablas">
+<div style="margin: 20px;">
     <?php
     echo "<table class='table table-bordered'><thead><tr><th>Matricula</th><th>Modelo</th><th>Fecha Compra</th><th>Numero de Puertas</th><th>Color</th><th>Valor</th><th>Fecha Baja</th></tr></thead><tbody>";
     foreach ($aVehiculosVista as $aVehiculo) {

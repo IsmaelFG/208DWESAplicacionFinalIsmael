@@ -13,7 +13,7 @@ class VehiculoPDO {
         // Preparamos y ejecutamos la consulta
         $consulta = "SELECT * FROM T10_Vehiculo WHERE T10_Modelo LIKE '%$modelo%'";
         $resultadoConsulta = DBPDO::ejecutaConsulta($consulta);
-        //Comprueba que no sea null el resultado de la consulta
+        //Comprueba que haya resultado de la consulta
         if ($resultadoConsulta) {
             //Recorre el resultado de la consulta guardandolo en el objeto vehiculo
             while ($oVehiculo = $resultadoConsulta->fetchObject()) {
