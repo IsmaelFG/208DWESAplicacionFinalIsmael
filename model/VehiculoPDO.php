@@ -11,7 +11,7 @@ class VehiculoPDO {
         //Inicializamos el array que contendra los vehiculos
         $aVehiculos = [];
         // Preparamos y ejecutamos la consulta
-        $consulta = "SELECT * FROM T10_Vehiculo WHERE T10_Modelo LIKE '%$modelo%'";
+        $consulta = "SELECT * FROM T10_Vehiculo WHERE T10_Modelo LIKE '%$modelo%' ORDER BY T10_Modelo";
         $resultadoConsulta = DBPDO::ejecutaConsulta($consulta);
         //Comprueba que haya resultado de la consulta
         if ($resultadoConsulta) {
