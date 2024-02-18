@@ -7,8 +7,18 @@
  */
 // Redirige a el inicio privado de la aplicacion si pulsa volver
 if (isset($_REQUEST['volver'])) {
-    // Redirige a la página de inicio
+    // Redirige a la página de inicioPrivado
     $_SESSION['paginaActiva'] = 'inicioPrivado';
+    header('Location: index.php');
+    exit();
+}
+
+
+if (isset($_REQUEST['editar'])) {
+    // Redirige a editarVehiculo
+    $_SESSION['paginaActiva'] = 'editarVehiculo';
+    //json_decode decodificamos el valor del request compviertiendolo en un array asociativo
+    $_SESSION['vehiculoEditar'] = json_decode($_REQUEST['editar'],true);
     header('Location: index.php');
     exit();
 }
@@ -37,6 +47,14 @@ if (isset($_REQUEST['buscarModeloVehiculo'])) {
     $entradaOK = false;
 }
 
+// Detecta si se ha pulsado uno de los botones de ordenamiento
+if (isset($_REQUEST['ordenAscendente'])) {
+    $_SESSION['orden'] = 'ASC';
+} elseif (isset($_REQUEST['ordenDescendente'])) {
+    $_SESSION['orden'] = 'DESC';
+}
+// Obtener la dirección del ordenamiento o establecer un valor predeterminado
+$orden = isset($_SESSION['orden']) ? $_SESSION['orden'] : 'ASC';
 //Si la entrada es Ok almacenamos el criterio de busqueda en sesion
 if ($entradaOK) {
     //Almacenamos el valor en el array en la session
@@ -46,9 +64,10 @@ if ($entradaOK) {
 //Iniciamos el array de la vista
 $aVehiculosVista = [];
 //Realiza la busqueda en la base de datos y lo mete en un array
-$aVehiculos = VehiculoPDO::buscarModeloVehiculo(isset($_SESSION['busqueda']) ? $_SESSION['busqueda'] : '');
+$aVehiculos = VehiculoPDO::buscarModeloVehiculo(isset($_SESSION['busqueda']) ? $_SESSION['busqueda'] : '', $orden);
 
 if ($aVehiculos) {
+
     //Recorro el array resultante
     foreach ($aVehiculos as $vehiculo) {
         //Metemos mediante array_push los campos en aVista
@@ -67,6 +86,5 @@ if ($aVehiculos) {
     //Mostramos los errores
     $aErrores['modeloVehiculo'] = "No hay vehiculos de este modelo";
 }
-
 // Cargo la vista
 require_once $view['layout'];

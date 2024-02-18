@@ -23,16 +23,24 @@
 </div>
 <div style="margin: 20px;">
     <?php
-    echo "<table class='table table-bordered'><thead><tr><th>Matricula</th><th>Modelo</th><th>Fecha Compra</th><th>Numero de Puertas</th><th>Color</th><th>Valor</th><th>Fecha Baja</th></tr></thead><tbody>";
+    echo "<table class='table table-bordered'><thead><tr><th>Matricula</th><th>Modelo <form method='post' style='display: inline;'><button type='submit' name='ordenAscendente'>&#x25B2;</button>
+<button type='submit' name='ordenDescendente'>&#x25BC;</button></form></th><th>Numero de Puertas</th><th>Color</th><th>Valor</th><th>Fecha Baja</th><th>Acciones</th></tr></thead><tbody>";
     foreach ($aVehiculosVista as $aVehiculo) {
         echo "<tr>";
         echo ("<td>" . $aVehiculo['matricula'] . "</td>");
         echo ("<td>" . $aVehiculo['modelo'] . "</td>");
-        echo ("<td>" . $aVehiculo['fechaCompra'] . "</td>");
         echo ("<td>" . $aVehiculo['numPuertas'] . "</td>");
-        echo ("<td>" . $aVehiculo['color'] . "</td>"); 
+        echo ("<td>" . $aVehiculo['color'] . "</td>");
         echo ("<td>" . $aVehiculo['valor'] . "</td>");
         echo ("<td>" . $aVehiculo['fechaBaja'] . "</td>");
+        //json_encode codificamos el array para poder enviarlo como value 
+        echo ("<td>
+  <form method='POST'>
+    <button type='submit' name='editar' value='" . json_encode($aVehiculo,true) . "'>
+      <img style='width:20px;' src='webroot/imagenes/lapiz.png'>
+    </button>
+  </form>
+</td>");
         echo "</tr>";
     }
     echo "</tbody></table>";

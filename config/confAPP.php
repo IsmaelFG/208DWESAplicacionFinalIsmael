@@ -33,7 +33,8 @@ $controller = [
     'borrarCuenta' => 'controller/cBorrarCuenta.php',
     'cambiarPassword' => 'controller/cCambiarPassword.php',
     'mtoDepartamento' => 'controller/cMtoDepartamento.php',
-    'mtoVehiculo' => 'controller/cMtoVehiculo.php'
+    'mtoVehiculo' => 'controller/cMtoVehiculo.php',
+    'editarVehiculo' => 'controller/cEditarVehiculo.php'
 ];
 
 $view = [
@@ -52,5 +53,6 @@ $view = [
     'borrarCuenta' => 'view/vBorrarCuenta.php',
     'cambiarPassword' => 'view/vCambiarPassword.php',
     'mtoDepartamento' => 'view/vMtoDepartamento.php',
-    'mtoVehiculo' => 'view/vMtoVehiculo.php'
+    'mtoVehiculo' => 'view/vMtoVehiculo.php',
+    'editarVehiculo' => 'view/vEditarVehiculo.php'
 ];
