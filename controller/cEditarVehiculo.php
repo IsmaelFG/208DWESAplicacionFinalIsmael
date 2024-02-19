@@ -12,7 +12,7 @@ $entradaOK = true;
 // Guarda los cambios realizados
 if (isset($_REQUEST['guardarCambios'])) {
     $aErrores['color'] = validacionFormularios::comprobarAlfabetico($_REQUEST['color'], 50, 3, 1);
-    $aErrores['valor'] = validacionFormularios::comprobarFloat($_REQUEST['valor'], PHP_FLOAT_MAX, 1, 1);
+    $aErrores['valor'] = validacionFormularios::comprobarFloat($_REQUEST['valor'], 1000000000, 1, 1);
     foreach ($aErrores as $campo => $error) {
         if ($error != null) {
             $entradaOK = false;

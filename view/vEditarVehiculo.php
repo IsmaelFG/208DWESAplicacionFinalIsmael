@@ -9,7 +9,7 @@
 <a class="navbar-brand text-white">Editar Vehiculo</a>
 </div>
 </nav>
-<div class="position-absolute top-0 start-50 translate-middle login" style="margin-top: 350px">
+<div class="position-absolute top-0 start-50 translate-middle login" style="margin-top: 350px; width: 700px;">
     <form method="post" action="">
         <table>
             <tbody>
@@ -21,18 +21,14 @@
                         <input class="d-flex justify-content-start" type="text" name="matricula"
                                value="<?php echo ($_SESSION['vehiculoEditar']['matricula']); ?>" disabled>
                     </td>
-                    <td class="error">
-                    </td>
                 </tr>
                 <tr>
                     <td class="d-flex justify-content-start">
-                            <label for="modelo">Modelo:</label>
+                        <label for="modelo">Modelo:</label>
                     </td>
                     <td>
                         <input class="d-flex justify-content-start" type="text" name="modelo"
                                value="<?php echo ($_SESSION['vehiculoEditar']['modelo']); ?>" disabled>
-                    </td>
-                    <td class="error">
                     </td>
                 </tr>
                 <tr>
@@ -42,6 +38,13 @@
                     <td>                                                     
                         <input class="d-flex justify-content-start" type="text" name="color" 
                                value="<?php echo ($_SESSION['vehiculoEditar']['color']); ?>">
+                    </td>
+                    <td class="error">
+                        <?php
+                        if (!empty($aErrores['color'])) {
+                            echo $aErrores['color'];
+                        }
+                        ?>
                     </td>
                 </tr>
                 <tr>
@@ -53,6 +56,11 @@
                                value="<?php echo ($_SESSION['vehiculoEditar']['valor']); ?>">
                     </td>
                     <td class="error">
+                        <?php
+                        if (!empty($aErrores['valor'])) {
+                            echo $aErrores['valor'];
+                        }
+                        ?>
                     </td>
                 </tr>
             </tbody>
