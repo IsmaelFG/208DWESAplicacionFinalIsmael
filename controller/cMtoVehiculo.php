@@ -5,10 +5,11 @@
  * @version 1.0
  * @since 12/02/2024
  */
-// Redirige a el inicio privado de la aplicacion si pulsa volver
+// Redirige al inicio privado de la aplicación si se pulsa volver
 if (isset($_REQUEST['volver'])) {
     // Redirige a la página de inicioPrivado
     $_SESSION['paginaActiva'] = 'inicioPrivado';
+    unset($_SESSION['busqueda']);
     header('Location: index.php');
     exit();
 }
@@ -18,7 +19,25 @@ if (isset($_REQUEST['editar'])) {
     // Redirige a editarVehiculo
     $_SESSION['paginaActiva'] = 'editarVehiculo';
     //json_decode decodificamos el valor del request compviertiendolo en un array asociativo
-    $_SESSION['vehiculoEditar'] = json_decode($_REQUEST['editar'],true);
+    $_SESSION['vehiculoEditar'] = json_decode($_REQUEST['editar'], true);
+    header('Location: index.php');
+    exit();
+}
+
+if (isset($_REQUEST['mostrar'])) {
+    // Redirige a editarVehiculo
+    $_SESSION['paginaActiva'] = 'mostrarVehiculo';
+    //json_decode decodificamos el valor del request compviertiendolo en un array asociativo
+    $_SESSION['vehiculoMostrar'] = json_decode($_REQUEST['mostrar'], true);
+    header('Location: index.php');
+    exit();
+}
+
+if (isset($_REQUEST['eliminar'])) {
+    // Redirige a editarVehiculo
+    $_SESSION['paginaActiva'] = 'eliminarVehiculo';
+    //json_decode decodificamos el valor del request compviertiendolo en un array asociativo
+    $_SESSION['vehiculoEliminar'] = json_decode($_REQUEST['eliminar'], true);
     header('Location: index.php');
     exit();
 }

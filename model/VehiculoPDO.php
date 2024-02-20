@@ -38,11 +38,21 @@ class VehiculoPDO {
         }
     }
 
-    public static function editarVehiculo($matricula, $color, $valor) {
+    public static function editarVehiculo($matricula,$modelo,$numPuertas, $color, $valor) {
         // Preparamos la consulta con marcadores de posición
-       $consulta = "UPDATE T10_Vehiculo SET T10_Color = '$color', T10_Valor = '$valor' WHERE T10_Matricula = '$matricula'";
+       $consulta = "UPDATE T10_Vehiculo SET T10_Modelo = '$modelo',T10_NumPuertas = '$numPuertas',T10_Color = '$color', T10_Valor = '$valor' WHERE T10_Matricula = '$matricula'";
         return DBPDO::ejecutaConsulta($consulta);
     }
+      public static function eliminarVehiculo($matricula) {
+          $consulta = "DELETE FROM T10_Vehiculo WHERE T10_Matricula= '$matricula';";
+          if(DBPDO::ejecutaConsulta($consulta)){
+              return true;
+          } else{
+              return false;
+          }
+          
+      }
+    
 }
 
 ?>

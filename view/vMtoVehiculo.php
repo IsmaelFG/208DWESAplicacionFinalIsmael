@@ -8,27 +8,23 @@
 <a class="navbar-brand text-white">Mantenimiento Vehiculo</a>
 </div>
 </nav>
-<div style="margin: 20px;">
+<div style="margin: 20px;" class="login">
     <form name="formulario" method="post">
-        <div>
-            <label for="DescDepartamento" style="margin-top: 5px;">Modelo: </label>
-            <input type="text" id="modeloVehiculo" name="modeloVehiculo" value="<?php echo isset($_SESSION['busqueda']) ? $_SESSION['busqueda'] : ''; ?>">
-            <input type="submit" value="Buscar" name="buscarModeloVehiculo">
-            <?php echo ($aErrores['modeloVehiculo'] != null ? "<span style='color:red'>" . $aErrores['modeloVehiculo'] . "</span>" : null); ?>
-            <div class="botonsMTO">
-                <input type="submit" value="Volver" name="volver">
-            </div>
-        </div>
+        <label for="modeloVehiculo" style="margin-top: 5px; display: inline-block;">Modelo:</label>
+        <input type="text" id="modeloVehiculo" name="modeloVehiculo" value="<?php echo isset($_SESSION['busqueda']) ? $_SESSION['busqueda'] : ''; ?>">
+        <input type="submit" value="Buscar" name="buscarModeloVehiculo">
+        <?php echo ($aErrores['modeloVehiculo'] != null ? "<span style='color:red'>" . $aErrores['modeloVehiculo'] . "</span>" : null); ?>
     </form>
 </div>
 <div style="margin: 20px;">
     <?php
     echo "<table class='table table-bordered'><thead><tr><th>Matricula</th><th>Modelo <form method='post' style='display: inline;'><button type='submit' name='ordenAscendente'>&#x25B2;</button>
-<button type='submit' name='ordenDescendente'>&#x25BC;</button></form></th><th>Numero de Puertas</th><th>Color</th><th>Valor</th><th>Fecha Baja</th><th>Acciones</th></tr></thead><tbody>";
+<button type='submit' name='ordenDescendente'>&#x25BC;</button></form></th><th>Fecha Compra</th><th>Numero de Puertas</th><th>Color</th><th>Valor</th><th>Fecha Baja</th><th>Acciones</th></tr></thead><tbody>";
     foreach ($aVehiculosVista as $aVehiculo) {
         echo "<tr>";
         echo ("<td>" . $aVehiculo['matricula'] . "</td>");
         echo ("<td>" . $aVehiculo['modelo'] . "</td>");
+        echo ("<td>" . $aVehiculo['fechaCompra'] . "</td>");
         echo ("<td>" . $aVehiculo['numPuertas'] . "</td>");
         echo ("<td>" . $aVehiculo['color'] . "</td>");
         echo ("<td>" . $aVehiculo['valor'] . "</td>");
@@ -36,8 +32,14 @@
         //json_encode codificamos el array para poder enviarlo como value 
         echo ("<td>
   <form method='POST'>
-    <button type='submit' name='editar' value='" . json_encode($aVehiculo,true) . "'>
+    <button type='submit' name='editar' value='" . json_encode($aVehiculo, true) . "'>
       <img style='width:20px;' src='webroot/imagenes/lapiz.png'>
+    </button>
+    <button type='submit' name='mostrar' value='" . json_encode($aVehiculo, true) . "'>
+      <img style='width:20px;' src='webroot/imagenes/ojo-removebg-preview.png'>
+    </button>
+    <button type='submit' name='eliminar' value='" . json_encode($aVehiculo, true) . "'>
+      <img style='width:20px;' src='webroot/imagenes/papelera.png'>
     </button>
   </form>
 </td>");
@@ -45,4 +47,7 @@
     }
     echo "</tbody></table>";
     ?>
+    <form>
+        <input type="submit" name="volver" value="Volver">
+    </form>
 </div>

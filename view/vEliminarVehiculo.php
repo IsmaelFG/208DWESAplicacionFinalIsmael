@@ -6,7 +6,7 @@
  */
 ?>
 
-<a class="navbar-brand text-white">Editar Vehiculo</a>
+<a class="navbar-brand text-white">Eliminar Vehiculo</a>
 </div>
 </nav>
 <div class="position-absolute top-0 start-50 translate-middle login" style="margin-top: 350px; width: 700px;">
@@ -19,7 +19,7 @@
                     </td>
                     <td>
                         <input class="d-flex justify-content-start" type="text" name="matricula"
-                               value="<?php echo ($_SESSION['vehiculoEditar']['matricula']); ?>" disabled>
+                               value="<?php echo ($_SESSION['vehiculoEliminar']['matricula']); ?>" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -28,14 +28,7 @@
                     </td>
                     <td>
                         <input class="d-flex justify-content-start" type="text" name="modelo"
-                               value="<?php echo ($_SESSION['vehiculoEditar']['modelo']); ?>">
-                    </td>
-                    <td class="error">
-                        <?php
-                        if (!empty($aErrores['modelo'])) {
-                            echo $aErrores['modelo'];
-                        }
-                        ?>
+                               value="<?php echo ($_SESSION['vehiculoEliminar']['modelo']); ?>" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -44,7 +37,7 @@
                     </td>
                     <td>
                         <input class="d-flex justify-content-start" type="text" name="fechaCompra"
-                               value="<?php echo ($_SESSION['vehiculoEditar']['fechaCompra']); ?>" disabled>
+                               value="<?php echo ($_SESSION['vehiculoEliminar']['fechaCompra']); ?>" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -53,14 +46,7 @@
                     </td>
                     <td>
                         <input class="d-flex justify-content-start" type="text" name="numPuertas"
-                               value="<?php echo ($_SESSION['vehiculoEditar']['numPuertas']); ?>">
-                    </td>
-                    <td class="error">
-                        <?php
-                        if (!empty($aErrores['numPuertas'])) {
-                            echo $aErrores['numPuertas'];
-                        }
-                        ?>
+                               value="<?php echo ($_SESSION['vehiculoEliminar']['numPuertas']); ?>" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -69,14 +55,7 @@
                     </td>
                     <td>                                                     
                         <input class="d-flex justify-content-start" type="text" name="color" 
-                               value="<?php echo ($_SESSION['vehiculoEditar']['color']); ?>">
-                    </td>
-                    <td class="error">
-                        <?php
-                        if (!empty($aErrores['color'])) {
-                            echo $aErrores['color'];
-                        }
-                        ?>
+                               value="<?php echo ($_SESSION['vehiculoEliminar']['color']); ?>" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -85,14 +64,7 @@
                     </td>
                     <td>
                         <input class="d-flex justify-content-start" type="text" name="valor"
-                               value="<?php echo ($_SESSION['vehiculoEditar']['valor']); ?>">
-                    </td>
-                    <td class="error">
-                        <?php
-                        if (!empty($aErrores['valor'])) {
-                            echo $aErrores['valor'];
-                        }
-                        ?>
+                               value="<?php echo ($_SESSION['vehiculoEliminar']['valor']); ?>" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -101,12 +73,12 @@
                     </td>
                     <td>
                         <input class="d-flex justify-content-start" type="text" name="fechaBaja"
-                               value="<?php echo ($_SESSION['vehiculoEditar']['fechaBaja']); ?>" disabled>
+                               value="<?php echo ($_SESSION['vehiculoEliminar']['fechaBaja']); ?>" disabled>
                     </td>
                 </tr>
             </tbody>
         </table>
-        <input type="submit" name="guardarCambios" value="Guardar Cambios">
+        <input type="submit" name="eliminarVehiculo" value="Eliminar Vehiculo" style="background-color: red">
         <input type="submit" name="cancelar" value="Cancelar">
     </form>
 </div>
