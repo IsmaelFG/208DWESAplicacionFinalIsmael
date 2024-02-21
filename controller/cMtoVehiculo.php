@@ -18,8 +18,7 @@ if (isset($_REQUEST['volver'])) {
 if (isset($_REQUEST['editar'])) {
     // Redirige a editarVehiculo
     $_SESSION['paginaActiva'] = 'editarVehiculo';
-    //json_decode decodificamos el valor del request compviertiendolo en un array asociativo
-    $_SESSION['vehiculoEditar'] = json_decode($_REQUEST['editar'], true);
+    $_SESSION['matriculaVehiculoActivo'] = $_REQUEST['editar'];
     header('Location: index.php');
     exit();
 }
@@ -27,8 +26,7 @@ if (isset($_REQUEST['editar'])) {
 if (isset($_REQUEST['mostrar'])) {
     // Redirige a editarVehiculo
     $_SESSION['paginaActiva'] = 'mostrarVehiculo';
-    //json_decode decodificamos el valor del request compviertiendolo en un array asociativo
-    $_SESSION['vehiculoMostrar'] = json_decode($_REQUEST['mostrar'], true);
+    $_SESSION['matriculaVehiculoActivo'] = $_REQUEST['mostrar'];
     header('Location: index.php');
     exit();
 }
@@ -37,7 +35,7 @@ if (isset($_REQUEST['eliminar'])) {
     // Redirige a editarVehiculo
     $_SESSION['paginaActiva'] = 'eliminarVehiculo';
     //json_decode decodificamos el valor del request compviertiendolo en un array asociativo
-    $_SESSION['vehiculoEliminar'] = json_decode($_REQUEST['eliminar'], true);
+    $_SESSION['matriculaVehiculoActivo'] = $_REQUEST['eliminar'];
     header('Location: index.php');
     exit();
 }

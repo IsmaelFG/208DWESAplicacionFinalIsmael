@@ -19,7 +19,7 @@
                     </td>
                     <td>
                         <input class="d-flex justify-content-start" type="text" name="matricula"
-                               value="<?php echo ($_SESSION['vehiculoEliminar']['matricula']); ?>" disabled>
+                               value="<?php echo ($matricula); ?>" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -28,7 +28,7 @@
                     </td>
                     <td>
                         <input class="d-flex justify-content-start" type="text" name="modelo"
-                               value="<?php echo ($_SESSION['vehiculoEliminar']['modelo']); ?>" disabled>
+                               value="<?php echo ($modelo); ?>" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -37,7 +37,7 @@
                     </td>
                     <td>
                         <input class="d-flex justify-content-start" type="text" name="fechaCompra"
-                               value="<?php echo ($_SESSION['vehiculoEliminar']['fechaCompra']); ?>" disabled>
+                               value="<?php echo ($fechaCompra); ?>" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -46,7 +46,7 @@
                     </td>
                     <td>
                         <input class="d-flex justify-content-start" type="text" name="numPuertas"
-                               value="<?php echo ($_SESSION['vehiculoEliminar']['numPuertas']); ?>" disabled>
+                               value="<?php echo ($numPuertas); ?>" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -55,7 +55,7 @@
                     </td>
                     <td>                                                     
                         <input class="d-flex justify-content-start" type="text" name="color" 
-                               value="<?php echo ($_SESSION['vehiculoEliminar']['color']); ?>" disabled>
+                               value="<?php echo ($color); ?>" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -64,7 +64,7 @@
                     </td>
                     <td>
                         <input class="d-flex justify-content-start" type="text" name="valor"
-                               value="<?php echo ($_SESSION['vehiculoEliminar']['valor']); ?>" disabled>
+                               value="<?php echo ($valor); ?>" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -73,7 +73,7 @@
                     </td>
                     <td>
                         <input class="d-flex justify-content-start" type="text" name="fechaBaja"
-                               value="<?php echo ($_SESSION['vehiculoEliminar']['fechaBaja']); ?>" disabled>
+                               value="<?php echo ($fechaBaja); ?>" disabled>
                     </td>
                 </tr>
             </tbody>

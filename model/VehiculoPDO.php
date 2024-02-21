@@ -38,21 +38,39 @@ class VehiculoPDO {
         }
     }
 
-    public static function editarVehiculo($matricula,$modelo,$numPuertas, $color, $valor) {
-        // Preparamos la consulta con marcadores de posición
-       $consulta = "UPDATE T10_Vehiculo SET T10_Modelo = '$modelo',T10_NumPuertas = '$numPuertas',T10_Color = '$color', T10_Valor = '$valor' WHERE T10_Matricula = '$matricula'";
+    public static function buscarVehiculoPorMatricula($matricula) {
+        $consulta = "SELECT * FROM T10_Vehiculo WHERE T10_Matricula= '$matricula';";
+        $resultadoConsulta = DBPDO::ejecutaConsulta($consulta);
+        // Obtener como array asociativo
+        $oVehiculo = $resultadoConsulta->fetchObject();
+        if ($oVehiculo) {
+            // Devolvemos el array asociativo
+            return new Vehiculo(
+                    $oVehiculo->T10_Matricula,
+                    $oVehiculo->T10_Modelo,
+                    $oVehiculo->T10_FechaCompra,
+                    $oVehiculo->T10_NumPuertas,
+                    $oVehiculo->T10_Color,
+                    $oVehiculo->T10_Valor,
+                    $oVehiculo->T10_FechaBaja);
+        } else {
+            return false;
+        }
+    }
+
+    public static function editarVehiculo($matricula, $modelo, $numPuertas, $color, $valor) {
+        $consulta = "UPDATE T10_Vehiculo SET T10_Modelo = '$modelo',T10_NumPuertas = '$numPuertas',T10_Color = '$color', T10_Valor = '$valor' WHERE T10_Matricula = '$matricula'";
         return DBPDO::ejecutaConsulta($consulta);
     }
-      public static function eliminarVehiculo($matricula) {
-          $consulta = "DELETE FROM T10_Vehiculo WHERE T10_Matricula= '$matricula';";
-          if(DBPDO::ejecutaConsulta($consulta)){
-              return true;
-          } else{
-              return false;
-          }
-          
-      }
-    
+
+    public static function eliminarVehiculo($matricula) {
+        $consulta = "DELETE FROM T10_Vehiculo WHERE T10_Matricula= '$matricula';";
+        if (DBPDO::ejecutaConsulta($consulta)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
 ?>

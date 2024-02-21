@@ -32,13 +32,13 @@
         //json_encode codificamos el array para poder enviarlo como value 
         echo ("<td>
   <form method='POST'>
-    <button type='submit' name='editar' value='" . json_encode($aVehiculo, true) . "'>
+    <button type='submit' name='editar' value='" . $aVehiculo['matricula'] . "'>
       <img style='width:20px;' src='webroot/imagenes/lapiz.png'>
     </button>
-    <button type='submit' name='mostrar' value='" . json_encode($aVehiculo, true) . "'>
+    <button type='submit' name='mostrar' value='" . $aVehiculo['matricula'] . "'>
       <img style='width:20px;' src='webroot/imagenes/ojo-removebg-preview.png'>
     </button>
-    <button type='submit' name='eliminar' value='" . json_encode($aVehiculo, true) . "'>
+    <button type='submit' name='eliminar' value='" . $aVehiculo['matricula'] . "'>
       <img style='width:20px;' src='webroot/imagenes/papelera.png'>
     </button>
   </form>
