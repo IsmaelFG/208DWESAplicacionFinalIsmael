@@ -39,7 +39,7 @@ class VehiculoPDO {
     }
 
     public static function buscarVehiculoPorMatricula($matricula) {
-        $consulta = "SELECT * FROM T10_Vehiculo WHERE T10_Matricula= '$matricula';";
+        $consulta = "ELECT * FROM T10_Vehiculo WHERE T10_Matricula= '$matricula';";
         $resultadoConsulta = DBPDO::ejecutaConsulta($consulta);
         // Obtener como array asociativo
         $oVehiculo = $resultadoConsulta->fetchObject();
