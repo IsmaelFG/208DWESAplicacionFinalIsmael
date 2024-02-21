@@ -49,5 +49,6 @@
     ?>
     <form>
         <input type="submit" name="volver" value="Volver">
+        <input type="submit" name="altaVehiculo" value="Añadir Vehiculo">
     </form>
 </div>

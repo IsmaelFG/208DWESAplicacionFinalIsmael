@@ -36,7 +36,8 @@ $controller = [
     'mtoVehiculo' => 'controller/cMtoVehiculo.php',
     'editarVehiculo' => 'controller/cEditarVehiculo.php',
     'mostrarVehiculo' => 'controller/cMostrarVehiculo.php',
-    'eliminarVehiculo' => 'controller/cEliminarVehiculo.php'
+    'eliminarVehiculo' => 'controller/cEliminarVehiculo.php',
+    'altaVehiculo' => 'controller/cAltaVehiculo.php'
 ];
 
 $view = [
@@ -58,5 +59,6 @@ $view = [
     'mtoVehiculo' => 'view/vMtoVehiculo.php',
     'editarVehiculo' => 'view/vEditarVehiculo.php',
     'mostrarVehiculo' => 'view/vMostrarVehiculo.php',
-    'eliminarVehiculo' => 'view/vEliminarVehiculo.php'
+    'eliminarVehiculo' => 'view/vEliminarVehiculo.php',
+    'altaVehiculo' => 'view/vAltaVehiculo.php'
 ];

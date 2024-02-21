@@ -7,6 +7,8 @@ if (isset($_REQUEST['volver'])) {
     exit();
 }
 
+
+
 $oVehiculo = VehiculoPDO::buscarVehiculoPorMatricula($_SESSION['matriculaVehiculoActivo']);
 if ($oVehiculo) {
     $matricula = $oVehiculo->getMatricula();

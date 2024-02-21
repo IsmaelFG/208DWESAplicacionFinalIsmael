@@ -14,9 +14,18 @@ if (isset($_REQUEST['volver'])) {
     exit();
 }
 
+// Redirige a altaVehiculo
+if (isset($_REQUEST['altaVehiculo'])) {
+    $_SESSION['paginaAnterior'] = 'mtoVehiculo';
+    $_SESSION['paginaActiva'] = 'altaVehiculo';
+    header('Location: index.php');
+    exit();
+}
+
 
 if (isset($_REQUEST['editar'])) {
     // Redirige a editarVehiculo
+    $_SESSION['paginaAnterior'] = 'mtoVehiculo';
     $_SESSION['paginaActiva'] = 'editarVehiculo';
     $_SESSION['matriculaVehiculoActivo'] = $_REQUEST['editar'];
     header('Location: index.php');
@@ -24,7 +33,8 @@ if (isset($_REQUEST['editar'])) {
 }
 
 if (isset($_REQUEST['mostrar'])) {
-    // Redirige a editarVehiculo
+    // Redirige a mostrarVehiculo
+    $_SESSION['paginaAnterior'] = 'mtoVehiculo';
     $_SESSION['paginaActiva'] = 'mostrarVehiculo';
     $_SESSION['matriculaVehiculoActivo'] = $_REQUEST['mostrar'];
     header('Location: index.php');
@@ -32,7 +42,8 @@ if (isset($_REQUEST['mostrar'])) {
 }
 
 if (isset($_REQUEST['eliminar'])) {
-    // Redirige a editarVehiculo
+    // Redirige a eliminarVehiculo
+    $_SESSION['paginaAnterior'] = 'mtoVehiculo';
     $_SESSION['paginaActiva'] = 'eliminarVehiculo';
     //json_decode decodificamos el valor del request compviertiendolo en un array asociativo
     $_SESSION['matriculaVehiculoActivo'] = $_REQUEST['eliminar'];

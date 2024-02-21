@@ -1,6 +1,6 @@
 <?php
 
-// Redirige a inicioPrivado
+    // Redirige a mtoVehiculo
 if (isset($_REQUEST['cancelar'])) {
     $_SESSION['paginaActiva'] = 'mtoVehiculo';
     header('Location: index.php');
