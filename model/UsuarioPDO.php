@@ -1,6 +1,7 @@
 <?php
 
 /**
+ * Clase UsuarioPDO contine los metodos usados en el logging de la aplicacion
  * @author Ismael Ferreras García
  * @version 1.0
  * @since 15/01/2024

@@ -1,6 +1,7 @@
 <?php
 
 /**
+ * Clase usuario contiene la declaracion de usuarios
  * @author Ismael Ferreras García
  * @version 1.0
  * @since 15/01/2024

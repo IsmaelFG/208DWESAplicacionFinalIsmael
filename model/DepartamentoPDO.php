@@ -1,6 +1,7 @@
 <?php
 
 /**
+ * Clase DepartamentoPDO contine los emtodos usados en MtoDepartamentos
  * @author Carlos García Cachón
  * @version 1.0
  * @since 18/01/2024

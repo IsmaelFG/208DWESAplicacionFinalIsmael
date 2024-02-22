@@ -1,6 +1,10 @@
 <?php
 
 /**
+ * Clase Vehiculo 
+ * 
+ * Clase Vehiculo contiene la declaracion de vehiculos para mtoVehiculos
+ * 
  * @author Ismael Ferreras García
  * @version 1.0
  * @since 12/02/2024

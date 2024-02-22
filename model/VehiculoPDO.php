@@ -1,6 +1,10 @@
 <?php
 
 /**
+ * Clase VehiculoPDO
+ * 
+ * Clase VehiculoPDO contiene los metodos utilizados en mtoVehiculos
+ * 
  * @author Ismael Ferreras García
  * @version 1.0
  * @since 12/02/2024
