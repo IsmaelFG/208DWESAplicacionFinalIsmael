@@ -21,6 +21,6 @@
     </table>
     <p class='error'><?php echo (!empty($aErrores["usuario"]) ? $aErrores["usuario"] : ''); ?></p>
     <input name="inicioSesion" type="submit" value="Iniciar Sesion">
-    <input name="registrar" type="submit" value="Registraté">
+    <input name="registrar" type="submit" value="Registrate">
     <input class="volver" type="submit" name="volver" value="Volver">
 </form>

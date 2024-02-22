@@ -23,6 +23,7 @@ if (isset($_REQUEST['cerrar_sesion'])) {
 
 // Ir a detalle al pulsar el boton
 if (isset($_REQUEST['detalle'])) {
+    $_SESSION['paginaAnterior'] = 'inicioPrivado';
     $_SESSION['paginaActiva'] = 'detalle';
     header('Location: index.php');
     exit();
@@ -30,6 +31,7 @@ if (isset($_REQUEST['detalle'])) {
 
 // Ir a MiCuenta al pulsar el boton
 if (isset($_REQUEST['editarPerfil'])) {
+    $_SESSION['paginaAnterior'] = 'inicioPrivado';
     $_SESSION['paginaActiva'] = 'miCuenta';
     header('Location: index.php');
     exit();
@@ -37,7 +39,24 @@ if (isset($_REQUEST['editarPerfil'])) {
 
 // Ir a rest al pulsar el boton
 if (isset($_REQUEST['rest'])) {
+    $_SESSION['paginaAnterior'] = 'inicioPrivado';
     $_SESSION['paginaActiva'] = 'rest';
+    header('Location: index.php');
+    exit();
+}
+
+// Ir a Mto Departamento al pulsar el boton
+if (isset($_REQUEST['mtoDepartamento'])) {
+    $_SESSION['paginaAnterior'] = 'inicioPrivado';
+    $_SESSION['paginaActiva'] = 'mtoDepartamento';
+    header('Location: index.php');
+    exit();
+}
+
+// Ir a Mto Vehiculo al pulsar el boton
+if (isset($_REQUEST['mtoVehiculo'])) {
+    $_SESSION['paginaAnterior'] = 'inicioPrivado';
+    $_SESSION['paginaActiva'] = 'mtoVehiculo';
     header('Location: index.php');
     exit();
 }

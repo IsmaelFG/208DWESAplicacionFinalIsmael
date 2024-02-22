@@ -29,6 +29,9 @@
                                 </a>
                             </div>
                             <div class="col text-end">
+                                <a href="view/vTecnologia.php" target="_blank" class="text-white mr-3" style="text-decoration: none;">Tecnologias</a>
+                                <a href="doc/rss/rss.xml" target="_blank" class="text-white mr-3" style="text-decoration: none;">RSS</a>
+                                <a href="doc/index.html" target="_blank" class="text-white mr-3" style="text-decoration: none;">PHPDoc</a>
                                 <a href="https://www.facebook.com/" target="_blank" class="text-white mr-3" style="text-decoration: none;">Imitada</a>
                                 <a href="webroot/documentos/curriculum.pdf" target="_blank" class="text-white mr-3" style="text-decoration: none;">Curriculum</a>
                                 <a href="https://github.com/IsmaelFG/208DWESAplicacionFinalIsmael" target="_blank">

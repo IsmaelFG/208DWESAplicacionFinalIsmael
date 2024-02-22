@@ -514,12 +514,34 @@ class validacionFormularios {  //ELIMINA EL METODO VALIDATEDATE Y LO INCLUYE EN 
          * En el caso que el campo fuese obligatorio, ya se habría validado en la
          * función comprobarAlfaNumerico.
          */
-        if(!empty($nombreArchivo)){
+        if (!empty($nombreArchivo)) {
             $sExtension = substr($nombreArchivo, strpos($nombreArchivo, '.') + 1);
             if (!in_array($sExtension, $aExtensiones)) {
-                $mensajeError = "El archivo no tiene una extensión válida. Sólo se admite ".implode(', ', $aExtensiones).".";
+                $mensajeError = "El archivo no tiene una extensión válida. Sólo se admite " . implode(', ', $aExtensiones) . ".";
             }
         }
+        return $mensajeError;
+    }
+
+    public static function validarFechaHora($fechaHora, $fechaMaxima = '2200-01-01 00:00:00', $fechaMinima = '1900-01-01 00:00:00', $obligatorio = 0) {
+        $mensajeError = null;
+        $fechaMaxima = strtotime($fechaMaxima);
+        $fechaMinima = strtotime($fechaMinima);
+
+        if ($obligatorio == 1) {
+            $mensajeError = self::comprobarNoVacio($fechaHora);
+        }
+
+        $fechaHoraFormateada = strtotime($fechaHora);
+
+        if (is_bool($fechaHoraFormateada) && !empty($fechaHora)) {
+            $mensajeError = "Formato incorrecto de fecha y hora (Año-Mes-dia Hora:Minuto:Segundo) (ejemplo: 2022-01-15 08:00:00).";
+        } else {
+            if (!empty($fechaHora) && ($fechaHoraFormateada < $fechaMinima || $fechaHoraFormateada > $fechaMaxima)) {
+                $mensajeError = "Por favor introduzca una fecha y hora entre " . date('Y-m-d H:i:s', $fechaMinima) . " y " . date('Y-m-d H:i:s', $fechaMaxima) . ".";
+            }
+        }
+
         return $mensajeError;
     }
 }

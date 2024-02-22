@@ -13,6 +13,10 @@ require_once 'model/Usuario.php';
 require_once 'model/UsuarioDB.php';
 require_once 'model/UsuarioPDO.php';
 require_once 'model/REST.php';
+require_once 'model/Departamento.php';
+require_once 'model/DepartamentoPDO.php';
+require_once 'model/Vehiculo.php';
+require_once 'model/VehiculoPDO.php';
 
 $controller = [
     'inicioPublico' => 'controller/cInicioPublico.php',
@@ -27,7 +31,13 @@ $controller = [
     'detalle' => 'controller/cDetalle.php',
     'rest' => 'controller/cREST.php',
     'borrarCuenta' => 'controller/cBorrarCuenta.php',
-    'cambiarPassword' => 'controller/cCambiarPassword.php'
+    'cambiarPassword' => 'controller/cCambiarPassword.php',
+    'mtoDepartamento' => 'controller/cMtoDepartamento.php',
+    'mtoVehiculo' => 'controller/cMtoVehiculo.php',
+    'editarVehiculo' => 'controller/cEditarVehiculo.php',
+    'mostrarVehiculo' => 'controller/cMostrarVehiculo.php',
+    'eliminarVehiculo' => 'controller/cEliminarVehiculo.php',
+    'altaVehiculo' => 'controller/cAltaVehiculo.php'
 ];
 
 $view = [
@@ -44,5 +54,11 @@ $view = [
     'detalle' => 'view/vDetalle.php',
     'rest' => 'view/vREST.php',
     'borrarCuenta' => 'view/vBorrarCuenta.php',
-    'cambiarPassword' => 'view/vCambiarPassword.php'
+    'cambiarPassword' => 'view/vCambiarPassword.php',
+    'mtoDepartamento' => 'view/vMtoDepartamento.php',
+    'mtoVehiculo' => 'view/vMtoVehiculo.php',
+    'editarVehiculo' => 'view/vEditarVehiculo.php',
+    'mostrarVehiculo' => 'view/vMostrarVehiculo.php',
+    'eliminarVehiculo' => 'view/vEliminarVehiculo.php',
+    'altaVehiculo' => 'view/vAltaVehiculo.php'
 ];

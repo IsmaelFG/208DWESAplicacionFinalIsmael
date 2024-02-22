@@ -46,9 +46,11 @@
 
             $query = "DROP TABLE IF EXISTS dbs12302442.T02_Departamento;";
             $query2 = "DROP TABLE IF EXISTS dbs12302442.T01_Usuario;";
+            $query3 = "DROP TABLE IF EXISTS dbs12302442.T10_Vehiculo;";
 
             $conn->exec($query);
             $conn->exec($query2);
+            $conn->exec($query3);
             echo 'Consulta ejecutada con éxito';
         } catch (PDOException $e) {
             echo 'Error: ' . $e->getMessage();

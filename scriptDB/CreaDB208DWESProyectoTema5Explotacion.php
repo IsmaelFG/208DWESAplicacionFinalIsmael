@@ -58,8 +58,19 @@
     T01_ImagenUsuario LONGBLOB,
     PRIMARY KEY (T01_CodUsuario));";
 
+            $query3 = "CREATE TABLE IF NOT EXISTS T10_Vehiculo (
+    T10_Matricula VARCHAR(7) NOT NULL,
+    T10_Modelo VARCHAR(50) NOT NULL,
+    T10_FechaCompra DATETIME NOT NULL,
+    T10_NumPuertas INT NOT NULL,
+    T10_Color VARCHAR(50),
+    T10_Valor DECIMAL(18,2),
+    T10_FechaBaja DATETIME DEFAULT NULL,
+    PRIMARY KEY (T10_Matricula));";
+
             $conn->exec($query);
             $conn->exec($query2);
+            $conn->exec($query3);
             ;
             echo 'Consulta ejecutada con éxito';
         } catch (PDOException $e) {

@@ -1,6 +1,7 @@
 <?php
 
 /**
+ * Clase ErrorApp para gestionar los errores de la aplicacion
  * @author Ismael Ferreras García
  * @version 1.0
  * @since 17/01/2024

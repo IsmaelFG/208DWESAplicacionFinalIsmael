@@ -121,9 +121,104 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/DBPDO.html#method_ejecutaConsulta"
         },                {
+            "fqsen": "\\Departamento",
+            "name": "Departamento",
+            "summary": "",
+            "url": "classes/Departamento.html"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Contructor\u0020de\u0020la\u0020clase\u0020Departamento",
+            "url": "classes/Departamento.html#method___construct"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003AgetCodDepartamento\u0028\u0029",
+            "name": "getCodDepartamento",
+            "summary": "Obtiene\u0020el\u0020c\u00F3digo\u0020de\u0020Departamento.",
+            "url": "classes/Departamento.html#method_getCodDepartamento"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003AgetDescDepartamento\u0028\u0029",
+            "name": "getDescDepartamento",
+            "summary": "Obtiene\u0020la\u0020descripci\u00F3n\u0020de\u0020Departamento.",
+            "url": "classes/Departamento.html#method_getDescDepartamento"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003AgetFechaCreacionDepartamento\u0028\u0029",
+            "name": "getFechaCreacionDepartamento",
+            "summary": "Obtiene\u0020la\u0020fecha\u0020de\u0020creaci\u00F3n\u0020de\u0020Departamento.",
+            "url": "classes/Departamento.html#method_getFechaCreacionDepartamento"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003AgetVolumenDeNegocio\u0028\u0029",
+            "name": "getVolumenDeNegocio",
+            "summary": "Obtiene\u0020el\u0020Volumen\u0020de\u0020Negocio\u0020de\u0020Departamento.",
+            "url": "classes/Departamento.html#method_getVolumenDeNegocio"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003AgetFechaBajaDepartamento\u0028\u0029",
+            "name": "getFechaBajaDepartamento",
+            "summary": "Obtiene\u0020la\u0020fecha\u0020de\u0020baja\u0020de\u0020Departamento.",
+            "url": "classes/Departamento.html#method_getFechaBajaDepartamento"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003AsetCodDepartamento\u0028\u0029",
+            "name": "setCodDepartamento",
+            "summary": "Establece\u0020el\u0020c\u00F3digo\u0020de\u0020Departamento",
+            "url": "classes/Departamento.html#method_setCodDepartamento"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003AsetDescDepartamento\u0028\u0029",
+            "name": "setDescDepartamento",
+            "summary": "Establece\u0020la\u0020descripci\u00F3n\u0020de\u0020Departamento",
+            "url": "classes/Departamento.html#method_setDescDepartamento"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003AsetFechaCreacionDepartamento\u0028\u0029",
+            "name": "setFechaCreacionDepartamento",
+            "summary": "Establece\u0020la\u0020fecha\u0020de\u0020creaci\u00F3n\u0020de\u0020Departamento",
+            "url": "classes/Departamento.html#method_setFechaCreacionDepartamento"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003AsetVolumenDeNegocio\u0028\u0029",
+            "name": "setVolumenDeNegocio",
+            "summary": "Establece\u0020el\u0020volumen\u0020de\u0020negocio\u0020del\u0020Departamento",
+            "url": "classes/Departamento.html#method_setVolumenDeNegocio"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003AsetFechaBajaDepartamento\u0028\u0029",
+            "name": "setFechaBajaDepartamento",
+            "summary": "Establece\u0020la\u0020fecha\u0020de\u0020baja\u0020de\u0020Departamento",
+            "url": "classes/Departamento.html#method_setFechaBajaDepartamento"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003A\u0024codDepartamento",
+            "name": "codDepartamento",
+            "summary": "C\u00F3digo\u0020de\u0020Departamento",
+            "url": "classes/Departamento.html#property_codDepartamento"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003A\u0024descDepartamento",
+            "name": "descDepartamento",
+            "summary": "Descripci\u00F3n\u0020de\u0020Departamento",
+            "url": "classes/Departamento.html#property_descDepartamento"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003A\u0024fechaCreacionDepartamento",
+            "name": "fechaCreacionDepartamento",
+            "summary": "Fecha\u0020de\u0020Creaci\u00F3n\u0020de\u0020Departamento",
+            "url": "classes/Departamento.html#property_fechaCreacionDepartamento"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003A\u0024volumenDeNegocio",
+            "name": "volumenDeNegocio",
+            "summary": "Volumen\u0020de\u0020Negocio",
+            "url": "classes/Departamento.html#property_volumenDeNegocio"
+        },                {
+            "fqsen": "\\Departamento\u003A\u003A\u0024fechaBajaDepartamento",
+            "name": "fechaBajaDepartamento",
+            "summary": "Fecha\u0020de\u0020Baja\u0020de\u0020Departamento",
+            "url": "classes/Departamento.html#property_fechaBajaDepartamento"
+        },                {
+            "fqsen": "\\DepartamentoPDO",
+            "name": "DepartamentoPDO",
+            "summary": "Clase\u0020DepartamentoPDO\u0020contine\u0020los\u0020emtodos\u0020usados\u0020en\u0020MtoDepartamentos",
+            "url": "classes/DepartamentoPDO.html"
+        },                {
+            "fqsen": "\\DepartamentoPDO\u003A\u003AbuscaDepartamentosPorDesc\u0028\u0029",
+            "name": "buscaDepartamentosPorDesc",
+            "summary": "Realiza\u0020una\u0020consulta\u0020filtrando\u0020por\u0020descripcion\u0020de\u0020deparamentos\u0020y\u0020devuleve\u0020su\u0020resultado",
+            "url": "classes/DepartamentoPDO.html#method_buscaDepartamentosPorDesc"
+        },                {
             "fqsen": "\\ErrorApp",
             "name": "ErrorApp",
-            "summary": "",
+            "summary": "Clase\u0020ErrorApp\u0020para\u0020gestionar\u0020los\u0020errores\u0020de\u0020la\u0020aplicacion",
             "url": "classes/ErrorApp.html"
         },                {
             "fqsen": "\\ErrorApp\u003A\u003A__construct\u0028\u0029",
@@ -186,9 +281,19 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/REST.html#method_pedirFotoNasa"
         },                {
+            "fqsen": "\\REST\u003A\u003AapikeyAEMET",
+            "name": "apikeyAEMET",
+            "summary": "",
+            "url": "classes/REST.html#constant_apikeyAEMET"
+        },                {
+            "fqsen": "\\REST\u003A\u003AapikeyNASA",
+            "name": "apikeyNASA",
+            "summary": "",
+            "url": "classes/REST.html#constant_apikeyNASA"
+        },                {
             "fqsen": "\\Usuario",
             "name": "Usuario",
-            "summary": "",
+            "summary": "Clase\u0020usuario\u0020contiene\u0020la\u0020declaracion\u0020de\u0020usuarios",
             "url": "classes/Usuario.html"
         },                {
             "fqsen": "\\Usuario\u003A\u003A__construct\u0028\u0029",
@@ -303,7 +408,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\UsuarioDB",
             "name": "UsuarioDB",
-            "summary": "",
+            "summary": "Interfaz\u0020para\u0020la\u0020clase\u0020UsuarioPDO",
             "url": "classes/UsuarioDB.html"
         },                {
             "fqsen": "\\UsuarioDB\u003A\u003AvalidarUsuario\u0028\u0029",
@@ -313,7 +418,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\UsuarioPDO",
             "name": "UsuarioPDO",
-            "summary": "",
+            "summary": "Clase\u0020UsuarioPDO\u0020contine\u0020los\u0020metodos\u0020usados\u0020en\u0020el\u0020logging\u0020de\u0020la\u0020aplicacion",
             "url": "classes/UsuarioPDO.html"
         },                {
             "fqsen": "\\UsuarioPDO\u003A\u003AvalidarUsuario\u0028\u0029",
@@ -335,6 +440,161 @@ Search.appendIndex(
             "name": "comprobarCodUSuario",
             "summary": "",
             "url": "classes/UsuarioPDO.html#method_comprobarCodUSuario"
+        },                {
+            "fqsen": "\\UsuarioPDO\u003A\u003AmodificarUsuario\u0028\u0029",
+            "name": "modificarUsuario",
+            "summary": "",
+            "url": "classes/UsuarioPDO.html#method_modificarUsuario"
+        },                {
+            "fqsen": "\\UsuarioPDO\u003A\u003AcambiarPassword\u0028\u0029",
+            "name": "cambiarPassword",
+            "summary": "",
+            "url": "classes/UsuarioPDO.html#method_cambiarPassword"
+        },                {
+            "fqsen": "\\UsuarioPDO\u003A\u003AborrarUsuario\u0028\u0029",
+            "name": "borrarUsuario",
+            "summary": "",
+            "url": "classes/UsuarioPDO.html#method_borrarUsuario"
+        },                {
+            "fqsen": "\\Vehiculo",
+            "name": "Vehiculo",
+            "summary": "Clase\u0020Vehiculo",
+            "url": "classes/Vehiculo.html"
+        },                {
+            "fqsen": "\\Vehiculo\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Vehiculo.html#method___construct"
+        },                {
+            "fqsen": "\\Vehiculo\u003A\u003AgetMatricula\u0028\u0029",
+            "name": "getMatricula",
+            "summary": "",
+            "url": "classes/Vehiculo.html#method_getMatricula"
+        },                {
+            "fqsen": "\\Vehiculo\u003A\u003AgetModelo\u0028\u0029",
+            "name": "getModelo",
+            "summary": "",
+            "url": "classes/Vehiculo.html#method_getModelo"
+        },                {
+            "fqsen": "\\Vehiculo\u003A\u003AgetFechaCompra\u0028\u0029",
+            "name": "getFechaCompra",
+            "summary": "",
+            "url": "classes/Vehiculo.html#method_getFechaCompra"
+        },                {
+            "fqsen": "\\Vehiculo\u003A\u003AgetNumPuertas\u0028\u0029",
+            "name": "getNumPuertas",
+            "summary": "",
+            "url": "classes/Vehiculo.html#method_getNumPuertas"
+        },                {
+            "fqsen": "\\Vehiculo\u003A\u003AgetColor\u0028\u0029",
+            "name": "getColor",
+            "summary": "",
+            "url": "classes/Vehiculo.html#method_getColor"
+        },                {
+            "fqsen": "\\Vehiculo\u003A\u003AgetValor\u0028\u0029",
+            "name": "getValor",
+            "summary": "",
+            "url": "classes/Vehiculo.html#method_getValor"
+        },                {
+            "fqsen": "\\Vehiculo\u003A\u003AgetFechaBaja\u0028\u0029",
+            "name": "getFechaBaja",
+            "summary": "",
+            "url": "classes/Vehiculo.html#method_getFechaBaja"
+        },                {
+            "fqsen": "\\Vehiculo\u003A\u003AsetMatricula\u0028\u0029",
+            "name": "setMatricula",
+            "summary": "",
+            "url": "classes/Vehiculo.html#method_setMatricula"
+        },                {
+            "fqsen": "\\Vehiculo\u003A\u003AsetModelo\u0028\u0029",
+            "name": "setModelo",
+            "summary": "",
+            "url": "classes/Vehiculo.html#method_setModelo"
+        },                {
+            "fqsen": "\\Vehiculo\u003A\u003AsetFechaCompra\u0028\u0029",
+            "name": "setFechaCompra",
+            "summary": "",
+            "url": "classes/Vehiculo.html#method_setFechaCompra"
+        },                {
+            "fqsen": "\\Vehiculo\u003A\u003AsetNumPuertas\u0028\u0029",
+            "name": "setNumPuertas",
+            "summary": "",
+            "url": "classes/Vehiculo.html#method_setNumPuertas"
+        },                {
+            "fqsen": "\\Vehiculo\u003A\u003AsetColor\u0028\u0029",
+            "name": "setColor",
+            "summary": "",
+            "url": "classes/Vehiculo.html#method_setColor"
+        },                {
+            "fqsen": "\\Vehiculo\u003A\u003AsetValor\u0028\u0029",
+            "name": "setValor",
+            "summary": "",
+            "url": "classes/Vehiculo.html#method_setValor"
+        },                {
+            "fqsen": "\\Vehiculo\u003A\u003AsetFechaBaja\u0028\u0029",
+            "name": "setFechaBaja",
+            "summary": "",
+            "url": "classes/Vehiculo.html#method_setFechaBaja"
+        },                {
+            "fqsen": "\\Vehiculo\u003A\u003A\u0024matricula",
+            "name": "matricula",
+            "summary": "",
+            "url": "classes/Vehiculo.html#property_matricula"
+        },                {
+            "fqsen": "\\Vehiculo\u003A\u003A\u0024modelo",
+            "name": "modelo",
+            "summary": "",
+            "url": "classes/Vehiculo.html#property_modelo"
+        },                {
+            "fqsen": "\\Vehiculo\u003A\u003A\u0024fechaCompra",
+            "name": "fechaCompra",
+            "summary": "",
+            "url": "classes/Vehiculo.html#property_fechaCompra"
+        },                {
+            "fqsen": "\\Vehiculo\u003A\u003A\u0024numPuertas",
+            "name": "numPuertas",
+            "summary": "",
+            "url": "classes/Vehiculo.html#property_numPuertas"
+        },                {
+            "fqsen": "\\Vehiculo\u003A\u003A\u0024color",
+            "name": "color",
+            "summary": "",
+            "url": "classes/Vehiculo.html#property_color"
+        },                {
+            "fqsen": "\\Vehiculo\u003A\u003A\u0024valor",
+            "name": "valor",
+            "summary": "",
+            "url": "classes/Vehiculo.html#property_valor"
+        },                {
+            "fqsen": "\\Vehiculo\u003A\u003A\u0024fechaBaja",
+            "name": "fechaBaja",
+            "summary": "",
+            "url": "classes/Vehiculo.html#property_fechaBaja"
+        },                {
+            "fqsen": "\\VehiculoPDO",
+            "name": "VehiculoPDO",
+            "summary": "Clase\u0020VehiculoPDO",
+            "url": "classes/VehiculoPDO.html"
+        },                {
+            "fqsen": "\\VehiculoPDO\u003A\u003AbuscarModeloVehiculo\u0028\u0029",
+            "name": "buscarModeloVehiculo",
+            "summary": "",
+            "url": "classes/VehiculoPDO.html#method_buscarModeloVehiculo"
+        },                {
+            "fqsen": "\\VehiculoPDO\u003A\u003AbuscarVehiculoPorMatricula\u0028\u0029",
+            "name": "buscarVehiculoPorMatricula",
+            "summary": "",
+            "url": "classes/VehiculoPDO.html#method_buscarVehiculoPorMatricula"
+        },                {
+            "fqsen": "\\VehiculoPDO\u003A\u003AeditarVehiculo\u0028\u0029",
+            "name": "editarVehiculo",
+            "summary": "",
+            "url": "classes/VehiculoPDO.html#method_editarVehiculo"
+        },                {
+            "fqsen": "\\VehiculoPDO\u003A\u003AeliminarVehiculo\u0028\u0029",
+            "name": "eliminarVehiculo",
+            "summary": "",
+            "url": "classes/VehiculoPDO.html#method_eliminarVehiculo"
         },                {
             "fqsen": "\\",
             "name": "\\",

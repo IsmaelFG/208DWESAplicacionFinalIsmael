@@ -19,6 +19,8 @@
         <input type="submit" name="detalle" value="Detalle">
         <input type="submit" name="editarPerfil" value="Editar Perfil">
         <input type="submit" name="rest" value="Rest">
+        <input type="submit" name="mtoDepartamento" value="Mto Departamentos">
+         <input type="submit" name="mtoVehiculo" value="Mto Vehiculos">
     </form>
 </div>
 
