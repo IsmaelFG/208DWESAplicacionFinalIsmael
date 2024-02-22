@@ -27,7 +27,6 @@ if (isset($_REQUEST['guardarCambios'])) {
 
     if ($entradaOK) {
         VehiculoPDO::editarVehiculo($_SESSION['matriculaVehiculoActivo'], $_REQUEST['modelo'], $_REQUEST['numPuertas'], $_REQUEST['color'], $_REQUEST['valor']);
-        //Redireccionamos a el inicio privado
         $_SESSION['paginaActiva'] = 'mtoVehiculo';
         header('Location: index.php');
         exit();
