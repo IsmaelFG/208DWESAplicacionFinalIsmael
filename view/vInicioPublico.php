@@ -24,13 +24,29 @@
         <div id="carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="webroot/imagenes/esquemaApp.PNG" class="img-fluid" alt="Mapeo de la Aplicación">
+                    <a href="webroot/imagenes/ArbolDeNavegacion.jpg" target="_blank">
+                        <img src="webroot/imagenes/ArbolDeNavegacion.jpg" class="img-fluid" style="height: 800px;">
+                    </a>
                 </div>
                 <div class="carousel-item" data-bs-interval="10000">
-                    <img src="webroot/imagenes/archivosApp.PNG" class="img-fluid" alt="Archivos de la Aplicación">
+                    <a href="webroot/imagenes/DiagramaDeCasosDeUso.jpg" target="_blank">
+                        <img src="webroot/imagenes/DiagramaDeCasosDeUso.jpg" class="img-fluid" style="height: 800px;">
+                    </a>
                 </div>
                 <div class="carousel-item" data-bs-interval="10000">
-                    <img src="webroot/imagenes/DiagramaClases.PNG" class="img-fluid" alt="Archivos de la Aplicación">
+                    <a href="webroot/imagenes/sesion.PNG" target="_blank">
+                        <img src="webroot/imagenes/sesion.PNG" class="img-fluid" style="height: 800px;">
+                    </a>
+                </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                    <a href="webroot/imagenes/archivos.PNG" target="_blank">
+                        <img src="webroot/imagenes/archivos.PNG" class="img-fluid" style="height: 800px;">
+                    </a>
+                </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                    <a href="webroot/imagenes/ficheros.png" target="_blank">
+                        <img src="webroot/imagenes/ficheros.png" class="img-fluid" style="height: 800px;">
+                    </a>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
