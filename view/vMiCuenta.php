@@ -9,7 +9,7 @@
 <a class="navbar-brand text-white">Mi Cuenta</a>
 </div>
 </nav>
-<div class="position-absolute top-0 start-50 translate-middle login" style="margin-top: 350px">
+<div class="position-absolute top-0 start-50 translate-middle login" style="margin-top: 350px; width: 750px;">
     <form method="post" action="">
         <table>
             <tbody>

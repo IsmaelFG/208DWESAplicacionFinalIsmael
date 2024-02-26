@@ -48,6 +48,16 @@
                         <img src="webroot/imagenes/ficheros.png" class="img-fluid" style="height: 800px;">
                     </a>
                 </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                    <a href="webroot/imagenes/ModeloFisicoDeDatos.png" target="_blank">
+                        <img src="webroot/imagenes/ModeloFisicoDeDatos.png" class="img-fluid" style="height: 800px;">
+                    </a>
+                </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                    <a href="webroot/documentos/230129CatalogoDeRequisitos.pdf" target="_blank">
+                        <img src="webroot/imagenes/requisitos.png" class="img-fluid" style="height: 800px;">
+                    </a>
+                </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="false"></span>

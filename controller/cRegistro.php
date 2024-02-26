@@ -13,14 +13,15 @@ $aErrores = [
     'contrasena' => '',
     'contrasena2' => ''
 ];
-$entradaOK = true; // Indica si todas las respuestas son correctas
+$entradaOK = true;
 if (isset($_REQUEST['registrar'])) {
     $_SESSION['paginaAnterior'] = 'registro';
     // Validar los campos
     $aErrores = [
-        'usuario' => (!$_REQUEST['usuario']) ? 'Error de autentificacion. Vuelve a introducir las credenciales.' : validacionFormularios::comprobarAlfaNumerico($_REQUEST['usuario'], 32, 4, 1),
-        'descUsuario' => (!$_REQUEST['descUsuario']) ? 'Error de autentificacion. Vuelve a introducir las credenciales.' : validacionFormularios::comprobarAlfaNumerico($_REQUEST['descUsuario'], 32, 4, 1),
-        'contrasena' => (!$_REQUEST['contrasena']) ? 'Error de autentificacion. Vuelve a introducir las credenciales.' : validacionFormularios::validarPassword($_REQUEST['contrasena'], 32, 4, 2, 1)
+        'usuario' => validacionFormularios::comprobarAlfaNumerico($_REQUEST['usuario'], 32, 4, 1),
+        'descUsuario' => validacionFormularios::comprobarAlfaNumerico($_REQUEST['descUsuario'], 32, 4, 1),
+        'contrasena' => validacionFormularios::validarPassword($_REQUEST['contrasena'], 32, 4, 2, 1),
+        'contrasena2' => validacionFormularios::validarPassword($_REQUEST['contrasena2'], 32, 4, 2, 1)
     ];
 
     //Comprobamos si existe un usuario con ese codigo

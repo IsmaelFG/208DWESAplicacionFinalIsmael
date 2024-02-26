@@ -9,7 +9,6 @@ if (isset($_REQUEST['cancelar'])) {
 //Si pulsa el boton borrarCuenta, se borra la cuenta y redirige a inicioPublico
 if (isset($_REQUEST['borrarCuenta'])) { 
     $oUsuarioAEliminar = $_SESSION['user208DWESLoginLogout']->getcodUsuario();
-    
     if (UsuarioPDO::borrarUsuario($oUsuarioAEliminar)) {
         session_destroy();
         $_SESSION['paginaActiva'] = 'inicioPublico';

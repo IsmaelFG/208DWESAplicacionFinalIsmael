@@ -114,5 +114,20 @@ if ($aVehiculos) {
     //Mostramos los errores
     $aErrores['modeloVehiculo'] = "No hay vehiculos de este modelo";
 }
+
+if (isset($_REQUEST['flechaAbajo'])) {
+    // Agregar la fecha de baja actual
+    VehiculoPDO::agregarFechaBaja($_REQUEST['flechaAbajo']);
+    header('Location: index.php');
+    exit();
+}
+
+if (isset($_REQUEST['flechaArriba'])) {
+    // Eliminar la fecha de baja
+    VehiculoPDO::eliminarFechaBaja($_REQUEST['flechaArriba']);
+    header('Location: index.php');
+    exit();
+}
+
 // Cargo la vista
 require_once $view['layout'];

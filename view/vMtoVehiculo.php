@@ -5,6 +5,16 @@
  * @since 12/02/2024
  */
 ?>
+<style>
+    th, td {
+        text-align: center;
+        padding: 8px;
+        width: 150px;
+    }
+    .texto-rojo {
+        color: red !important;
+    }
+</style>
 <a class="navbar-brand text-white">Mantenimiento Vehiculo</a>
 </div>
 </nav>
@@ -22,27 +32,29 @@
 <button type='submit' name='ordenDescendente'>&#x25BC;</button></form></th><th>Fecha Compra</th><th>Numero de Puertas</th><th>Color</th><th>Valor</th><th>Fecha Baja</th><th>Acciones</th></tr></thead><tbody>";
     foreach ($aVehiculosVista as $aVehiculo) {
         echo "<tr>";
-        echo ("<td>" . $aVehiculo['matricula'] . "</td>");
-        echo ("<td>" . $aVehiculo['modelo'] . "</td>");
-        echo ("<td>" . $aVehiculo['fechaCompra'] . "</td>");
-        echo ("<td>" . $aVehiculo['numPuertas'] . "</td>");
-        echo ("<td>" . $aVehiculo['color'] . "</td>");
-        echo ("<td>" . $aVehiculo['valor'] . "</td>");
-        echo ("<td>" . $aVehiculo['fechaBaja'] . "</td>");
-        //json_encode codificamos el array para poder enviarlo como value 
+        echo ("<td" . (empty($aVehiculo['fechaBaja']) ? '' : " class='texto-rojo'") . ">" . $aVehiculo['matricula'] . "</td>");
+        echo ("<td" . (empty($aVehiculo['fechaBaja']) ? '' : " class='texto-rojo'") . ">" . $aVehiculo['modelo'] . "</td>");
+        echo ("<td" . (empty($aVehiculo['fechaBaja']) ? '' : " class='texto-rojo'") . ">" . $aVehiculo['fechaCompra'] . "</td>");
+        echo ("<td" . (empty($aVehiculo['fechaBaja']) ? '' : " class='texto-rojo'") . ">" . $aVehiculo['numPuertas'] . "</td>");
+        echo ("<td" . (empty($aVehiculo['fechaBaja']) ? '' : " class='texto-rojo'") . ">" . $aVehiculo['color'] . "</td>");
+        echo ("<td" . (empty($aVehiculo['fechaBaja']) ? '' : " class='texto-rojo'") . ">" . $aVehiculo['valor'] . "</td>");
+        echo ("<td" . (empty($aVehiculo['fechaBaja']) ? '' : " class='texto-rojo'") . ">" . $aVehiculo['fechaBaja'] . "</td>");
         echo ("<td>
-  <form method='POST'>
-    <button type='submit' name='editar' value='" . $aVehiculo['matricula'] . "'>
-      <img style='width:20px;' src='webroot/imagenes/lapiz.png'>
-    </button>
-    <button type='submit' name='mostrar' value='" . $aVehiculo['matricula'] . "'>
-      <img style='width:20px;' src='webroot/imagenes/ojo-removebg-preview.png'>
-    </button>
-    <button type='submit' name='eliminar' value='" . $aVehiculo['matricula'] . "'>
-      <img style='width:20px;' src='webroot/imagenes/papelera.png'>
-    </button>
-  </form>
-</td>");
+    <form method='POST'>
+        <button type='submit' name='editar' value='" . $aVehiculo['matricula'] . "'>
+            <img style='width:20px;' src='webroot/imagenes/lapiz.png'>
+        </button>
+        <button type='submit' name='mostrar' value='" . $aVehiculo['matricula'] . "'>
+            <img style='width:20px;' src='webroot/imagenes/ojo-removebg-preview.png'>
+        </button>
+        <button type='submit' name='eliminar' value='" . $aVehiculo['matricula'] . "'>
+            <img style='width:20px;' src='webroot/imagenes/papelera.png'>
+        </button>" .
+        (empty($aVehiculo['fechaBaja']) ?
+                " <button type='submit' name='flechaAbajo' value='" . $aVehiculo['matricula'] . "'><img style='width:20px;' src='webroot/imagenes/flechaAbajo.png'></button>" :
+                " <button type='submit' name='flechaArriba' value='" . $aVehiculo['matricula'] . "'><img style='width:20px;' src='webroot/imagenes/flechaArriba.png'></button>") .
+        "</form>
+    </td>");
         echo "</tr>";
     }
     echo "</tbody></table>";

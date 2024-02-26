@@ -85,6 +85,16 @@ class VehiculoPDO {
             return false;
         }
     }
+
+    public static function agregarFechaBaja($matricula) {
+        $consulta = "UPDATE T10_Vehiculo SET T10_FechaBaja = NOW() WHERE T10_Matricula = '$matricula'";
+        return DBPDO::ejecutaConsulta($consulta);
+    }
+
+    public static function eliminarFechaBaja($matricula) {
+        $consulta = "UPDATE T10_Vehiculo SET T10_FechaBaja = NULL WHERE T10_Matricula = '$matricula'";
+        return DBPDO::ejecutaConsulta($consulta);
+    }
 }
 
 ?>

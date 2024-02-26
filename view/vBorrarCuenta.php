@@ -15,7 +15,7 @@
 <div class="row d-flex justify-content-start">
     <div class="col">
         <form name="Programa" method="post">
-            <input type="submit" name="guardarCambios" value="Borrar Cuenta" style="background-color:red">
+            <input type="submit" name="borrarCuenta" value="Borrar Cuenta" style="background-color:red">
             <input type="submit" name="cancelar" value="Cancelar">
         </form> 
     </div>
